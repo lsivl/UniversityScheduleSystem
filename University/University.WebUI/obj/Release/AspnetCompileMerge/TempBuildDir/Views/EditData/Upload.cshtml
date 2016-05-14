@@ -1,0 +1,120 @@
+﻿@model  List<University.WebUI.Models.ExcelTableRowModel>
+
+<script>
+    $("#downloadButton").click(function (e) {
+        e.preventDefault();
+        $("#resultTable").fadeTo("slow", 0);
+        $("#indicator").show();
+        $("#indicator").fadeTo("fast", 1);
+        $("#indicator").css("text-align", "center");
+        url = '@Url.Content("~/")' + "EditData/SaveToDb";
+        var cathedraId = $("#cathedraList").val();
+        $.post(url, { cathedraId: cathedraId }, function (result) {
+            $("#resultTable").replaceWith(result).queue(function () {
+                $("#indicator").fadeTo("fast", 0);
+                $("#resultTable").fadeTo("slow", 1);
+                $("#indicator").hide();
+            });
+        });
+    })
+</script>
+
+<div id="resultTable" style="margin: 0 auto; text-align:center; opacity: 0">
+    <h5 style="font-style:oblique;">В результаті завантаження файлу, було отримано такі дані: </h5><br>
+    @if ((@Model[0].Subject != null) && (@Model[0].ClassroomForDownload == null))
+    {
+        <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>Назви навчальних дисциплін і видів навчальної роботи</th>
+                <th>Курс</th>
+                <th>Спаренність пар</th>
+                <th>Факультет</th>
+                <th>Потік</th>
+                <th>Групи потоку</th>
+                <th>Об'єднані групи на певні предмети</th>
+                <th>Лекції</th>
+                <th>П.І.Б. викладача(посада)</th>
+                <th>Аудиторія</th>
+                <th>Практичні</th>
+                <th>П.І.Б. викладача(посада)</th>
+                <th>Аудиторія</th>
+                <th>Лабораторні</th>
+                <th>П.І.Б. викладача(посада)</th>
+                <th>Аудиторія</th>
+
+            </tr><!-- Table Header -->
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>@item.Subject</td>
+                    <td>@item.Course</td>
+                    <td>@item.Coupled</td>
+                    <td>@item.Faculty</td>
+                    <td>@item.Stream</td>
+                    <td>@item.GroupsOfStream</td>
+                    <td>@item.UnitedGroups </td>
+                    <td>@item.LectionHour</td>
+                    <td>@item.LectionTeacher</td>
+                    <td>@item.LectionClassroom</td>
+                    <td>@item.PracticalHour</td>
+                    <td>@item.PracticalTeacher</td>
+                    <td>@item.PracticalClassroom</td>
+                    <td>@item.LabHour</td>
+                    <td>@item.LabTeacher</td>
+                    <td>@item.LabClassroom</td>
+                </tr>
+            }
+        </table>
+    }
+    else if ((@Model[0].Subject == null) && (@Model[0].Stream != null))
+    {
+        <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>Назва потоку</th>
+                <th>Групи потоку</th>
+                <th>Кількість студентів</th>
+                <th>Курс</th>
+                <th>Факультет</th>
+            </tr><!-- Table Header -->
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>@item.Stream</td>
+                    <td>
+                        @try
+                        {
+                            foreach (var group in @item.GroupsOfStream)
+                            { @(group + ",") }
+                        }
+                        catch { }
+                    </td>
+                    <td>@item.StudentsCount</td>
+                    <td>@item.Course</td>
+                    <td>@item.Faculty</td>
+                </tr>
+            }
+        </table>
+    }
+    else if (@Model[0].ClassroomForDownload != null)
+    {
+        <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>Назва аудиторії</th>
+                <th>Вид аудиторії</th>
+                <th>Кіл-ть посад.місць</th>
+                <th>Кафедра</th>
+            </tr><!-- Table Header -->
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>@item.ClassroomForDownload</td>
+                    <td>@item.ClassroomType</td>
+                    <td>@item.ClassroomCapacity</td>
+                    <td>@item.Cathedra</td>
+                </tr>
+            }
+        </table>
+    }
+    <br /><h5 style="font-style:oblique;">Перевірте коректність отриманих даних в таблиці та натисність кнопку "Завантажити у базу даних"</h5>
+    <input id="downloadButton" type="button" class="myButton" value="Завантажити у базу даних" id="btnFileUpload" />
+</div>

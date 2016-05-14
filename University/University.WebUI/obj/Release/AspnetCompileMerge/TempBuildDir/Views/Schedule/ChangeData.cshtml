@@ -1,0 +1,171 @@
+﻿@model University.WebUI.Models.TableLessonChange
+
+@if (@Model.PropertyNumber == 2)
+{
+    <tr id="@Model.ParrentTableNode">
+        <td id="@Model.TdIds[0]">
+            <p>@Model.LessonNumber</p>
+            <p style="display:none" id="textError">@Model.TextError</p>
+        </td>
+        <td id="@Model.TdIds[1]">
+            <select name="TypeLesson" style="width: 150px">
+                <option value="@Model.SelectedTypeLesson.LessonTypeId" selected>@Model.SelectedTypeLesson.LessonTypeName</option>
+                @foreach (var typeLesson in @Model.TypesLesson)
+                {
+                    <option value="@typeLesson.LessonTypeId">@typeLesson.LessonTypeName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[2]">
+            <select name="Subject" style="width: 150px">
+                <option selected disabled>Виберіть предмет</option>
+                @foreach (var subject in @Model.Subjects)
+                {
+                    <option value="@subject.SubjectId">@subject.SubjectName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[3]">
+            <select disabled name="Teacher" style="width: 150px">
+                <option disabled selected>Не вказано</option>
+            </select>
+        </td>
+        <td id="@Model.TdIds[4]">
+            <select disabled name="Classroom" style="width: 150px">
+                <option disabled selected>Не вказано</option>
+            </select>
+        </td>
+    </tr>
+}else if(@Model.PropertyNumber==3)
+{
+     <tr id="@Model.ParrentTableNode">
+        <td id="@Model.TdIds[0]">
+            <p>@Model.LessonNumber</p>
+            <p style="display:none" id="textError">@Model.TextError</p>
+        </td>
+        <td id="@Model.TdIds[1]">
+            <select name="TypeLesson" style="width: 150px">
+                <option value="@Model.SelectedTypeLesson.LessonTypeId" selected>@Model.SelectedTypeLesson.LessonTypeName</option>
+                @foreach (var typeLesson in @Model.TypesLesson)
+                {
+                    <option value="@typeLesson.LessonTypeId">@typeLesson.LessonTypeName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[2]">
+            <select name="Subject" style="width: 150px">
+                <option value="@Model.SelectedSubject.SubjectId" selected>@Model.SelectedSubject.SubjectName</option>
+                @foreach (var subject in @Model.Subjects)
+                {
+                    <option value="@subject.SubjectId">@subject.SubjectName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[3]">
+            <select name="Teacher" style="width: 150px">
+                <option disabled selected>Виберіть викладача</option>
+                @foreach (var teacher in @Model.Teachers)
+                {
+                    <option value="@teacher.TeacherId">@teacher.TeacherName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[4]">
+            <select disabled name="Classroom" style="width: 150px">
+                <option disabled selected>Не вказано</option>
+            </select>
+        </td>
+    </tr>
+}else if(@Model.PropertyNumber==4)
+{
+     <tr id="@Model.ParrentTableNode">
+        <td id="@Model.TdIds[0]">
+            <p>@Model.LessonNumber</p>
+            <p style="display:none" id="textError">@Model.TextError</p>
+        </td>
+        <td id="@Model.TdIds[1]">
+            <select name="TypeLesson" style="width: 150px">
+                <option value="@Model.SelectedTypeLesson.LessonTypeId" selected>@Model.SelectedTypeLesson.LessonTypeName</option>
+                @foreach (var typeLesson in @Model.TypesLesson)
+                {
+                    <option value="@typeLesson.LessonTypeId">@typeLesson.LessonTypeName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[2]">
+            <select name="Subject" style="width: 150px">
+                <option value="@Model.SelectedSubject.SubjectId" selected>@Model.SelectedSubject.SubjectName</option>
+                @foreach (var subject in @Model.Subjects)
+                {
+                    <option value="@subject.SubjectId">@subject.SubjectName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[3]">
+            <select name="Teacher" style="width: 150px">
+                <option value="@Model.SelectedTeacher.TeacherId" selected>@Model.SelectedTeacher.TeacherName</option>
+                @foreach (var teacher in @Model.Teachers)
+                {
+                    <option value="@teacher.TeacherId">@teacher.TeacherName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[4]">
+            <select name="Classroom" style="width: 150px">
+                <option disabled selected>Виберіть аудиторію</option>
+                @foreach (var classroom in @Model.Classrooms)
+                {
+                    <option value="@classroom.ClassroomId">@classroom.ClassroomName</option>
+                }
+            </select>
+        </td>
+    </tr>
+}else if (@Model.PropertyNumber == 5)
+{
+    <tr id="@Model.ParrentTableNode">
+        <td id="@Model.TdIds[0]">
+            <p>@Model.LessonNumber</p>
+            <p style="display:none" id="textError">@Model.TextError</p>
+            <p style="display:none" id="ChangeReady">Ready</p>
+        </td>
+        <td id="@Model.TdIds[1]">
+            <select name="TypeLesson" style="width: 150px">
+                <option value="@Model.SelectedTypeLesson.LessonTypeId" selected>@Model.SelectedTypeLesson.LessonTypeName</option>
+                @foreach (var typeLesson in @Model.TypesLesson)
+                {
+                    <option value="@typeLesson.LessonTypeId">@typeLesson.LessonTypeName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[2]">
+            <select name="Subject" style="width: 150px">
+                <option value="@Model.SelectedSubject.SubjectId" selected>@Model.SelectedSubject.SubjectName</option>
+                @foreach (var subject in @Model.Subjects)
+                {
+                    <option value="@subject.SubjectId">@subject.SubjectName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[3]">
+            <select name="Teacher" style="width: 150px">
+                <option value="@Model.SelectedTeacher.TeacherId" selected>@Model.SelectedTeacher.TeacherName</option>
+                @foreach (var teacher in @Model.Teachers)
+                {
+                    <option value="@teacher.TeacherId">@teacher.TeacherName</option>
+                }
+            </select>
+        </td>
+        <td id="@Model.TdIds[4]">
+            <select name="Classroom" style="width: 150px">
+                <option value="@Model.SelectesClassroom.ClassroomId" selected>@Model.SelectesClassroom.ClassroomName</option>
+                @foreach (var classroom in @Model.Classrooms)
+                {
+                    <option value="@classroom.ClassroomId">@classroom.ClassroomName</option>
+                }
+            </select>
+        </td>
+    </tr>
+   
+}
+
+

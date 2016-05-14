@@ -1,0 +1,131 @@
+﻿@model University.WebUI.Models.ShortVersionsModels.StreamEditModel
+
+<script>
+    $(document).ready(function () {
+        $("#resultMessage").fadeTo("slow", 1);
+        $("#StudentsCount").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                // Allow: Ctrl+A
+                (e.keyCode == 65 && e.ctrlKey === true) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+
+        });
+
+        $(document).on("keyup", "input", function (e) {
+            // e.preventDefault();
+
+            var text = $(this).val();
+            var parentNode = this.parentNode;
+            var parentNodeId = "#" + parentNode.id;
+            if (text.length < 1 || text == null) {
+
+                $(this).css("background-color", "#FFD1D1");
+                $(parentNodeId + " label").fadeTo("fast", 1);
+                $("#SaveButton").fadeTo("fast", 0);
+                $("#SaveButton").prop('disabled', true);
+            } else if (text.length > 0) {
+                $(this).css("background-color", "#FFFFFF");
+                $(parentNodeId + " label").fadeTo("fast", 0);
+                $("#SaveButton").prop('disabled', false);
+                $("#SaveButton").fadeTo("fast", 1);
+            }
+        });
+        $("#dialog").dialog({
+            title: "Ви дійсно хочете видалити групу ",// + streamName + "?",    //тайтл, заголовок окна
+            width: 450,              //ширина
+            height: 300,            //высота
+            position: [725, 200],
+            modal: true,            //true -  окно модальное, false - нет
+            autoOpen:false,
+            buttons: {
+                "Так": function () {
+                    $("#All").fadeTo("slow", 0);
+                    $("#indicator").show();
+                    $("#indicator").fadeTo("fast", 1);
+                    $("#indicator").css("text-align", "center");
+                    url = '@Url.Content("~/")' + "EditData/DeleteStream";
+                    $.post(url, { StreamID: streamId }, function (result) {
+                        $("#All").replaceWith(result).queue(function () {
+                            $("#indicator").fadeTo("fast", 0);
+                            $("#All").fadeTo("slow", 1);
+                            $("#indicator").hide();
+                        });
+                    });
+                },
+                "Ні": function () {  }
+            }
+        });
+        $("#DeleteButton").click(function (e) {
+            var streamId = $("#StreamID").text();
+            var streamName = $("#StreamName").text();
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            $("#dialog").dialog("open");
+
+        })
+    });
+</script>
+
+<div id="indicator" style="display:none; text-align:center; opacity: 0">
+    <p style="font-style:oblique; text-align:center">Завантажується розклад. Зачекайте будь ласка...</p>
+    <img id="indicatorImg" src="@Url.Content("~/Content/loading.gif")" alt="loading..." />
+</div>
+
+<p id="StreamID" style="display:none;">@Model.StreamID</p>
+<p id="StreamName" style="display:none;">@Model.StreamName</p>
+<div id="All" style="text-align:left">
+    <h2>РЕДАГУВАННЯ ПОТОКУ</h2>
+    <div id="resultMessage" style="height: auto; width: 35%; text-align: left; margin-left: 0px; opacity: 0;">
+        @if (Model.Message != null)
+        {
+
+            if (Model.Message == "Зміни успішно збережені!")
+            {
+                <div class="success" style="height: auto; width: 50%; text-align: left; margin-left: 0px; margin-right: auto">@Model.Message</div>
+            }
+            else if (Model.Message == "Ви не внесли зміни!")
+            {
+                <div class="warning" style="auto; width: 50%; text-align: left; margin-left: 0px; margin-right: auto">@Model.Message</div>
+            }
+        }
+    </div>
+    <div id="dialog"></div>
+    <form action="@Url.Action("SaveStream")" method="post">
+        <fieldset>
+            <div>
+                @Html.Label("Назва потоку: ")
+                <div style="display:inline-block;" id="StreamNameLabel">@Html.TextBoxFor(x => x.StreamName) <label style="color: red; opacity: 0; display: inline-block;">Значення назви потоку не може бути пустим!</label></div>
+            </div>
+            <div id="studentCount">
+                @Html.Label("Кількість студентів потоку: ")
+                <div style="display:inline-block;" id="studentCountLabel">@Html.TextBoxFor(x => x.StudentsCount) <label style="color: red; opacity: 0; display: inline-block;">Значення кількості студентів не може бути пустим!</label></div>
+            </div>
+            <div>
+                <label>Рік навчання:  @Html.DropDownListFor(x => x.YearOfStudy, Model.CoursesNumbers)</label>
+            </div>
+            <div>
+                @Html.Label("Фаульет, якому підпорядкоється потік: ")
+                <label>@Html.DropDownListFor(x => x.FacultyID, Model.Faculties)</label>
+            </div>
+            <div style="display:none">
+                @Html.TextBoxFor(x => x.StreamID)
+            </div>
+
+            <div id="SaveButtonDiv">
+                <input id="SaveButton" name="save" type="submit" class="button button-green" value="Зберегти зміни" />
+               
+            </div>
+        </fieldset>
+    </form>
+    <input id="DeleteButton"  type="submit" class="button button-red" value="Видалити потік" />
+</div>

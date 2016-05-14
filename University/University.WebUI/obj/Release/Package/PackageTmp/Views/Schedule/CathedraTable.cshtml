@@ -1,0 +1,64 @@
+﻿@model University.WebUI.Models.CathedraTableModel
+
+
+<h1>ТАБЛИЦЯ РОЗКЛАДУ</h1>
+
+<link href="~/Content/Input.css" rel="stylesheet" />
+<p id="firstLesson" style="display:none">@Model.</p>
+<div id="scheduleTable" style="text-align: center">
+
+    <h1>ТАБЛИЦЯ РОЗКЛАДУ</h1>
+    <table class="simple-little-table" cellspacing='0'>
+        <tr>
+            <th style="text-align:center"><font size="3"><span>Перший(непарний) тиждень</span></font></th>
+            <th style="text-align:center"><font size="3"><span>Другий(парний) тиждень</span></font></th>
+        </tr>
+        <tr>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Monday).ToList())
+            </td>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Monday).ToList())
+            </td>
+
+        </tr>
+        <tr class='even'>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Thursday).ToList())
+            </td>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Thursday).ToList())
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Wednesday).ToList())
+            </td>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Wednesday).ToList())
+            </td>
+
+        </tr>
+        <tr class='even'>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Tuesday).ToList())
+            </td>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Tuesday).ToList())
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Friday).ToList())
+            </td>
+            <td>
+                @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Friday).ToList()))
+            </td>
+        </tr>
+    </table>
+ 
+
+
+    <div id="saveResult" style="display:none"></div>
+</div>

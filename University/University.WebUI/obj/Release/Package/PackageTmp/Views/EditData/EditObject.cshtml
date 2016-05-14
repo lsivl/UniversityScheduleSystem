@@ -1,0 +1,162 @@
+﻿@model University.WebUI.Models.ShortVersionsModels.StartEditObjectModel
+
+<script>
+
+    $(document).ready(function () {
+        StartEditObject();
+
+    });
+    function StartEditObject() {
+        var url = '@Url.Content("~/")' + "EditData/EditObjectMenu";
+        var IdOb = $("#IdObject").text();
+        var typeObj = $("#TypeObject").text();
+        var total = 0;
+        $.post(url, { id: IdOb, typeObject: typeObj }, function (result) {
+            $("#All").replaceWith(result);
+            StartEdit();
+            total = $('#All input[type="text"]').filter(function () { return !this.value; }).length;
+            if (total > 0) {
+                $('#All input[type="text"]').each(function () {
+                    if ($(this).val() == '') {
+                        var parentNode = this.parentNode;
+                        var parentNodeId = "#" + parentNode.id;
+                        $(this).css("background-color", "#FFD1D1");
+                        $(parentNodeId + " label").fadeTo("fast", 1);
+                        $("#SaveButton").fadeTo("fast", 0);
+                        $("#SaveButton").prop('disabled', true);
+                    }
+                });
+
+                $("#SaveButton").fadeTo("fast", 0);
+                $("#SaveButton").prop('disabled', true);
+            }
+        });
+
+    };
+    function StartEdit() {
+        $("#resultMessage").fadeTo("slow", 1);
+        $("#All").fadeTo("fast", 1);
+        $("#facultyList select").change(function (e) {
+            e.preventDefault();
+            var url = '@Url.Content("~/")' + "EditData/EditObjectMenu";
+            var IdOb = $("#IdObject").text();
+            var typeObj = $("#TypeObject").text();
+            $.post(url, { id: IdOb, typeObject: typeObj, facultyId: $("#facultyList select").val() }, function (result) {
+                $("#All").replaceWith(result).queue(function () {
+                    var change = $("#ChangeFaculty").text();
+                    if (change.trim() == "Y") {
+                        $("#changeMessage").fadeTo("fast", 1);
+                        $("#cathdraList select").change(function (e) {
+                            e.preventDefault();
+                            $("#changeMessage").fadeTo("fast", 0);
+                        });
+                    }
+                    StartEdit();
+                    var total = 0;
+                    total = $('#All input[type="text"]').filter(function () { return !this.value; }).length;
+                    if (total > 0) {
+                        $('#All input[type="text"]').each(function () {
+                            if ($(this).val() == '') {
+                                var parentNode = this.parentNode;
+                                var parentNodeId = "#" + parentNode.id;
+                                $(this).css("background-color", "#FFD1D1");
+                                $(parentNodeId + " label").fadeTo("fast", 1);
+                                $("#SaveButton").fadeTo("fast", 0);
+                                $("#SaveButton").prop('disabled', true);
+                            }
+                        });
+
+                        $("#SaveButton").fadeTo("fast", 0);
+                        $("#SaveButton").prop('disabled', true);
+                    }
+                });
+
+            });
+
+        });
+        $("#StudentsCount").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                // Allow: Ctrl+A
+                (e.keyCode == 65 && e.ctrlKey === true) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+
+        });
+
+        $(document).on("keyup", "input", function (e) {
+            // e.preventDefault();
+
+            var text = $(this).val();
+            var parentNode = this.parentNode;
+            var parentNodeId = "#" + parentNode.id;
+            var total = 0;
+            total = $('#All input[type="text"]').filter(function () { return !this.value; }).length;
+            //$('input[type="text"]').each(function () {
+            //    if (this.val().length < 1)
+            //        total = total + 1;
+            //});
+            //alert(total);
+            if (text.length < 1 || text == null) {
+                $(this).css("background-color", "#FFD1D1");
+                $(parentNodeId + " label").fadeTo("fast", 1);
+                $("#SaveButton").fadeTo("fast", 0);
+                $("#SaveButton").prop('disabled', true);
+            } else if (text.length > 0) {
+                $(this).css("background-color", "#FFFFFF");
+                $(parentNodeId + " label").fadeTo("fast", 0);
+                if (total < 1) {
+                    $("#SaveButton").prop('disabled', false);
+                    $("#SaveButton").fadeTo("fast", 1);
+                }
+            }
+        });
+
+        $("#DeleteButton").click(function (e) {
+            e.preventDefault();
+            $("#All").fadeTo("fast", 0);
+            var url = '@Url.Content("~/")' + "EditData/EditObjectMenu";
+            var IdOb = $("#IdObject").text();
+            var typeObj = $("#TypeObject").text();
+            $.post(url, { id: IdOb, typeObject: typeObj, facultyId: null, isDelete: true }, function (result) {
+                $("#All").replaceWith(result).queue(function () {
+                    $("#All").css("text-align", "center");
+                    StartEdit();
+                })
+            });
+        });
+        $("#backToEdit").click(function (e) {
+            e.preventDefault();
+            $("#All").fadeTo("fast", 0);
+            StartEditObject();
+        });
+
+        $("#validateDelete").click(function (e) {
+            $("#All").fadeTo("fast", 0);
+            var url = '@Url.Content("~/")' + "EditData/DeleteObject";
+            var IdOb = $("#IdObject").text();
+            var typeObj = $("#TypeObject").text();
+            $.post(url, { id: IdOb, typeObject: typeObj }, function (result) {
+                $("#All").replaceWith(result).queue(function () {
+                    $("#All").css("text-align", "center");
+                    StartEdit();
+                })
+            });
+
+        });
+    };
+</script>
+
+<p id="TypeObject" style="display:none;">@Model.TypeObject</p>
+<p id="IdObject" style="display:none;">@Model.ID</p>
+<p id="CountNotCorrect" style="display:none;">0</p>
+<div id="All" style="opacity: 0">
+
+</div>

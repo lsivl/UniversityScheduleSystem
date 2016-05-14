@@ -1,0 +1,14 @@
+﻿@model List<University.Domain.Models.Stream>
+<div id="courseSelection" style="display:none; text-align:center">
+    <p id="streamCount" style="display:none">@Model.Count</p>
+    <h4 id="textSelection" style="text-align:center; opacity:1">Виберіть потік:</h4>
+    @*@for (int i = 0; i < @Model.Count; i++)
+    {
+        <input id="stream_@i" type="button" class="ButtonCourse" style="opacity:1" value="@Model[i]." />
+    }*@
+    @foreach (var item in @Model)
+    {
+        <input id="@item.StreamID" type="button" class="ButtonCourse" value="@item.StreamName"/>
+    }
+</div>
+    

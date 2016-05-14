@@ -1,0 +1,9 @@
+﻿<div id="All" style="text-align: center; opacity: 0">
+    <div class="success" style="width: 50%; text-align: center; margin: auto;">Об'єкт успішно видалений!</div>
+    @*<input id="EndEdit" type="submit" class="button button-green" style="width:100px" value="Головне меню" />*@
+    @*<p class="button button-green">@Html.ActionLink("Головне меню", "Index", "Home")</p>*@
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+        <input type="submit" class="button button-green" style="width:200px" value="Головне меню" />
+    }
+</div>

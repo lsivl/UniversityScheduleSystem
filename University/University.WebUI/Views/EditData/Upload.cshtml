@@ -1,0 +1,99 @@
+﻿@model  University.WebUI.Models.UploadModel
+
+<script>
+    $(document).ready(function () {
+        $("#downloadButton").click(function (e) {
+            e.preventDefault();
+            $("#resultTable").fadeTo("slow", 0);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            url = '@Url.Content("~/")' + "EditData/SaveToDb";
+            var cathedraId = $("#cathedraId").text();
+            var type = $("#typeDataField").text();
+            $.post(url, { cathedraId: cathedraId, isDelete: $("#isDelete").prop("checked"), typeData: type }, function (result) {
+                $("#resultTable").replaceWith(result).queue(function () {
+                    $("#indicator").fadeTo("fast", 0);
+                    $("#resultTable").fadeTo("slow", 1);
+                    $("#indicator").hide();
+                });
+            });
+        });
+        $("#courseSelection input").click(function (e) {
+            e.preventDefault();
+            $("#contentFile").fadeTo("slow", 0);
+            url = '@Url.Content("~/")' + "EditData/ShowContent";
+            var courseNaumber = this.id;
+            var type = $("#typeDataField").text();
+            $.post(url, { course: courseNaumber, typeData: type }, function (result) {
+                $("#contentFile").replaceWith(result).queue(function () {
+                    $("#contentFile").fadeTo("slow", 1);
+                    $("#isDeleteDiv").fadeTo("slow", 1);
+                    $("#downloadButton").fadeTo("slow", 1);
+                });
+            });
+        })
+    })
+
+
+</script>
+
+<p id="typeDataField" style="display:none">@Model.TypeData</p>
+<div id="resultTable" style="margin: 0 auto; text-align:center; opacity: 0">
+    @if (Model.Courses != null && Model.Courses.Count > 0 && ViewBag.Message == null)
+    {
+        <div class="success" id="error" style="height: auto; width: 25%; text-align: center; margin-left: auto; margin-right: auto">Файл коректний</div>
+        @*<h5 style="font-style:oblique;">В результаті завантаження файлу, було отримано такі дані: </h5><br>*@
+        //if ((@Model[0].Subject != null) && (@Model[0].ClassroomForDownload == null))
+        //{
+        <div id="courseSelection" style="text-align:center; opacity: 1">
+            @if (@Model.TypeData.Trim() == "1")
+            {
+                <p id="cathedraId" style="display:none">@Model.CathedraID</p>
+                <h2>Кафедра: @Model.CathedraName</h2>
+            }
+            <h4>Доступні курси для перегляду даних навантаження з файлу:</h4>
+            @foreach (var item in @Model.Courses)
+            {
+                <input id="@item" type="button" class="ButtonCourse" value="@item  курс" />
+            }
+            <div id="contentFile" style="text-align:center; opacity:0">
+
+            </div>
+        </div>
+
+        //}
+        //else if (@Model[0].ClassroomForDownload != null)
+        //{
+        @*<table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>Назва аудиторії</th>
+                <th>Вид аудиторії</th>
+                <th>Кіл-ть посад.місць</th>
+                <th>Кафедра</th>
+            </tr>*@<!-- Table Header -->
+        @*@foreach (var item in @Model)
+            {
+            <tr>
+                <td>@item.ClassroomForDownload</td>
+                <td>@item.ClassroomType</td>
+                <td>@item.ClassroomCapacity</td>
+                <td>@item.Cathedra</td>
+            </tr>
+            }*@
+        @*</table>*@
+        // }
+        <label class="warning" id="isDeleteDiv" style="height: auto; width: 25%; text-align: center; margin-left: auto; margin-right: auto; opacity: 0">
+            <input id="isDelete" type="checkbox" class="myButton" style="margin: 0 auto; text-align:center;" checked>
+            Видалити попередні дані навантаження вибраної кафедри
+            <br />
+        </label>
+        <label>
+            <input id="downloadButton" type="button" class="button-red" style="margin: 0 auto; text-align:center; opacity: 0" value="Завантажити у базу даних" />
+        </label>
+    }
+    else
+    {
+        <div class="error" id="error" style="height: auto; width: 50%; text-align: center; margin-left: auto; margin-right: auto">@ViewBag.Message</div>
+    }
+</div>

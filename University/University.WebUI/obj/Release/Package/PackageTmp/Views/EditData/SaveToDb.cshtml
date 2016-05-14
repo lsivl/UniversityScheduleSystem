@@ -1,0 +1,13 @@
+﻿@model  University.WebUI.Models.SaveToDbModel
+
+ 
+<div id="resultTable" style="height: auto; width: 35%; text-align: center; margin-left: auto; margin-right: auto; opacity: 0">
+@if (Model.Correct == true)
+{
+    <div class="success"  style="height: auto; width: 50%; text-align: center; margin-left: auto; margin-right: auto">@Model.Message</div> @*Завантаження даних успішно завершено!*@
+}
+else
+{
+    <div class="error"  style="height: auto; width: 50%; text-align: center; margin-left: auto; margin-right: auto">@Model.Message</div>
+}
+</div>

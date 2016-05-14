@@ -1,0 +1,131 @@
+﻿@model University.WebUI.Models.DayModel
+
+<script>
+    //$(document).ready(function () {
+    //    $("select").select2({ maximumSelectionSize: 1, placeholder: "Поле для пошуку..." })
+    //});
+</script>
+
+<h5>@Model.DayName</h5>
+<table id="mainTable" class="simple-little-table" cellspacing='0'>
+    <tr>
+        <th><font size="1"><span>№ пари</span></font></th>
+        <th><font size="1"><span>Предмет</span></font></th>
+        <th><font size="1"><span>Тип пари</span></font></th>
+        <th><font size="1"><span>Викладач</span></font></th>
+        <th><font size="1"><span>Аудиторія</span></font></th>
+    </tr>
+    @for (int i = 1; i < 7; i++)
+    {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @try
+                {
+                    if (Model.DayLessons[i - 1].Subject != null)
+                    {
+                        <input type="text" style="width: 150px" value="@Model.DayLessons[i - 1].Subject" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>@Model.DayLessons[i - 1].Subject</option>
+                            </select>*@
+                    }
+                    else if (Model.DayLessons[i - 1].Subject == null)
+                    {
+                        <input type="text" style="width: 150px" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>Виберіть предмет</option>
+                            </select>*@
+                    }
+
+                }
+                catch (Exception)
+                {
+                    <input type="text" style="width: 150px" value="@Model.DayLessons[i - 1].Subject" readonly>
+                    @*<select style="width: 150px">
+                            <option disabled selected>Виберіть предмет</option>
+                        </select>*@
+                }
+            </td>
+            <td>
+                @try
+                {
+                    if (Model.DayLessons[i - 1].LessonType != null)
+                    {
+                        <input type="text" style="width: 150px" value="@Model.DayLessons[i - 1].LessonType" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>@Model.DayLessons[i - 1].LessonType</option>
+                            </select>*@
+                    }
+                    else if (Model.DayLessons[i - 1].LessonType == null)
+                    {
+                        <input type="text" style="width: 150px" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>Виберіть тип пари</option>
+                            </select>*@
+                    }
+                }
+                catch (Exception)
+                {
+                    <input type="text" style="width: 150px" readonly>
+                    @*<select style="width: 150px">
+                            <option disabled selected>Виберіть тип пари</option>
+                        </select>*@
+                }
+            </td>
+            <td>
+                @try
+                {
+                    if (Model.DayLessons[i - 1].Teacher != null)
+                    {
+                        <input type="text" style="width: 150px" value="@Model.DayLessons[i - 1].Teacher" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>@Model.DayLessons[i - 1].Teacher</option>
+                            </select>*@
+                    }
+                    else if (Model.DayLessons[i - 1].Teacher == null)
+                    {
+                        <input type="text" style="width: 150px" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>Виберіть викладача</option>
+                            </select>*@
+                    }
+                }
+                catch (Exception)
+                {
+                    <input type="text" style="width: 150px" readonly>
+                    @*<select style="width: 150px">
+                            <option disabled selected>Виберіть викладача</option>
+                        </select>*@
+                }
+            </td>
+            <td>
+                @try
+                {
+                    if (Model.DayLessons[i - 1].Classroom != null)
+                    {
+                        <input type="text" style="width: 150px" value="@Model.DayLessons[i - 1].Classroom" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>@Model.DayLessons[i - 1].Classroom</option>
+                            </select>*@
+                    }
+                    else if (Model.DayLessons[i - 1].Classroom == null)
+                    {
+                        <input type="text" style="width: 150px" readonly>
+                        @*<select style="width: 150px">
+                                <option disabled selected>Виберіть аудиторію</option>
+                            </select>*@
+                    }
+                }
+                catch (Exception)
+                {
+                    <input type="text" style="width: 150px" readonly>
+                    @*<select style="width: 150px">
+                            <option disabled selected>Виберіть аудиторію</option>
+                        </select>*@
+                }
+            </td>
+        </tr>
+    }
+</table>

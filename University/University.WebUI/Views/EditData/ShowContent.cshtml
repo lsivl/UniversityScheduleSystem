@@ -1,0 +1,80 @@
+﻿@model  University.WebUI.Models.ShowContentModel
+
+<div id="contentFile" style="text-align:center; opacity:0">
+    <br />
+    <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+        @if (Model.TypeData.Trim() == "1")
+        {
+            <tr>
+                <th>Назви навчальних дисциплін і видів навчальної роботи</th>
+                <th>Курс</th>
+                <th>Спаренність пар</th>
+                <th>Факультет</th>
+                <th>Потік</th>
+                <th>Групи потоку</th>
+                <th>Об'єднані групи на певні предмети</th>
+                <th>Лекції</th>
+                <th>П.І.Б. викладача(посада)</th>
+                <th>Аудиторія</th>
+                <th>Практичні</th>
+                <th>П.І.Б. викладача(посада)</th>
+                <th>Аудиторія</th>
+                <th>Лабораторні</th>
+                <th>П.І.Б. викладача(посада)</th>
+                <th>Аудиторія</th>
+
+            </tr><!-- Table Header -->
+            foreach (var item in @Model.TableRows.Where(p => p.Course == Model.SelectedCourse))
+            {
+                <tr>
+                    <td>@item.Subject</td>
+                    <td>@item.Course</td>
+                    <td>@item.Coupled</td>
+                    <td>@item.Faculty</td>
+                    <td>@item.Stream</td>
+                    <td>@item.GroupsOfStream</td>
+                    <td>@item.UnitedGroups </td>
+                    <td>@item.LectionHour</td>
+                    <td>@item.LectionTeacher</td>
+                    <td>@item.LectionClassroom</td>
+                    <td>@item.PracticalHour</td>
+                    <td>@item.PracticalTeacher</td>
+                    <td>@item.PracticalClassroom</td>
+                    <td>@item.LabHour</td>
+                    <td>@item.LabTeacher</td>
+                    <td>@item.LabClassroom</td>
+                </tr>
+            }
+        }
+        else if (Model.TypeData.Trim() == "2")
+        {
+            @*<table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>*@
+                <tr>
+                    <th>Назва потоку</th>
+                    <th>Групи потоку</th>
+                    <th>Кількість студентів</th>
+                    <th>Курс</th>
+                    <th>Факультет</th>
+                </tr><!-- Table Header -->
+                foreach (var item in @Model.TableRows.Where(p => p.Course == Model.SelectedCourse))
+                {
+                    <tr>
+                        <td>@item.Stream</td>
+                        <td>
+                            @try
+                            {
+                                @*foreach (var group in item.GroupsOfStream)
+                                { @(group + ",") }*@
+                                @item.GroupsOfStream
+                            }
+                            catch { }
+                        </td>
+                        <td>@item.StudentsCount</td>
+                        <td>@item.Course</td>
+                        <td>@item.Faculty</td>
+                    </tr>
+                }
+        }
+    </table>
+        <br /><h5 style="font-style:oblique;">Перевірте коректність отриманих даних в таблиці та натисність кнопку "Завантажити у базу даних"</h5>
+    </div>

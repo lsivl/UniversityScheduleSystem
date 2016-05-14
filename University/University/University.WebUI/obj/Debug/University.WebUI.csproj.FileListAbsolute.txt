@@ -1,0 +1,740 @@
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\University.WebUI.dll.config
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\University.WebUI.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\University.WebUI.pdb
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\EntityFramework.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Data.OData.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Newtonsoft.Json.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Ninject.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Spatial.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Helpers.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Http.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Http.OData.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Mvc.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Optimization.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Razor.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.WebPages.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\University.Domain.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\WebGrease.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\WebMatrix.Data.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\WebMatrix.WebData.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\University.Domain.pdb
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Ninject.pdb
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Ninject.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\EntityFramework.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Newtonsoft.Json.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Helpers.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Http.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Mvc.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Razor.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.WebPages.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\WebMatrix.Data.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\WebMatrix.WebData.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Web.Http.OData.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\Microsoft.Data.OData.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\System.Spatial.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\de\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\es\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\it\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\obj\Debug\University.WebUI.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.WebUI\obj\Debug\University.WebUI.pdb
+G:\University\University.WebUI\bin\University.WebUI.dll.config
+G:\University\University.WebUI\bin\University.WebUI.dll
+G:\University\University.WebUI\bin\University.WebUI.pdb
+G:\University\University.WebUI\bin\Antlr3.Runtime.dll
+G:\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+G:\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+G:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+G:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+G:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+G:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+G:\University\University.WebUI\bin\EntityFramework.dll
+G:\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+G:\University\University.WebUI\bin\Microsoft.Data.OData.dll
+G:\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+G:\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+G:\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+G:\University\University.WebUI\bin\Newtonsoft.Json.dll
+G:\University\University.WebUI\bin\Ninject.dll
+G:\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+G:\University\University.WebUI\bin\System.Spatial.dll
+G:\University\University.WebUI\bin\System.Web.Helpers.dll
+G:\University\University.WebUI\bin\System.Web.Http.dll
+G:\University\University.WebUI\bin\System.Web.Http.OData.dll
+G:\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+G:\University\University.WebUI\bin\System.Web.Mvc.dll
+G:\University\University.WebUI\bin\System.Web.Optimization.dll
+G:\University\University.WebUI\bin\System.Web.Razor.dll
+G:\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+G:\University\University.WebUI\bin\System.Web.WebPages.dll
+G:\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+G:\University\University.WebUI\bin\University.Domain.dll
+G:\University\University.WebUI\bin\WebGrease.dll
+G:\University\University.WebUI\bin\WebMatrix.Data.dll
+G:\University\University.WebUI\bin\WebMatrix.WebData.dll
+G:\University\University.WebUI\bin\Ninject.pdb
+G:\University\University.WebUI\bin\Ninject.xml
+G:\University\University.WebUI\bin\EntityFramework.xml
+G:\University\University.WebUI\bin\Newtonsoft.Json.xml
+G:\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+G:\University\University.WebUI\bin\System.Web.Helpers.xml
+G:\University\University.WebUI\bin\System.Web.Http.xml
+G:\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+G:\University\University.WebUI\bin\System.Web.Mvc.xml
+G:\University\University.WebUI\bin\System.Web.Razor.xml
+G:\University\University.WebUI\bin\System.Web.WebPages.xml
+G:\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+G:\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+G:\University\University.WebUI\bin\WebMatrix.Data.xml
+G:\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+G:\University\University.WebUI\bin\WebMatrix.WebData.xml
+G:\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+G:\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+G:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+G:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+G:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+G:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+G:\University\University.WebUI\bin\System.Web.Http.OData.xml
+G:\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+G:\University\University.WebUI\bin\Microsoft.Data.OData.xml
+G:\University\University.WebUI\bin\System.Spatial.xml
+G:\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+G:\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+G:\University\University.WebUI\bin\de\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\es\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\it\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+G:\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+G:\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+G:\University\University.WebUI\obj\Debug\University.WebUI.dll
+G:\University\University.WebUI\obj\Debug\University.WebUI.pdb
+F:\University\University.WebUI\bin\University.WebUI.dll.config
+F:\University\University.WebUI\bin\University.WebUI.dll
+F:\University\University.WebUI\bin\University.WebUI.pdb
+F:\University\University.WebUI\bin\Antlr3.Runtime.dll
+F:\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+F:\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+F:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+F:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+F:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\University\University.WebUI\bin\EntityFramework.dll
+F:\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+F:\University\University.WebUI\bin\Microsoft.Data.OData.dll
+F:\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+F:\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\University\University.WebUI\bin\Newtonsoft.Json.dll
+F:\University\University.WebUI\bin\Ninject.dll
+F:\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+F:\University\University.WebUI\bin\System.Spatial.dll
+F:\University\University.WebUI\bin\System.Web.Helpers.dll
+F:\University\University.WebUI\bin\System.Web.Http.dll
+F:\University\University.WebUI\bin\System.Web.Http.OData.dll
+F:\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+F:\University\University.WebUI\bin\System.Web.Mvc.dll
+F:\University\University.WebUI\bin\System.Web.Optimization.dll
+F:\University\University.WebUI\bin\System.Web.Razor.dll
+F:\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+F:\University\University.WebUI\bin\System.Web.WebPages.dll
+F:\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+F:\University\University.WebUI\bin\University.Domain.dll
+F:\University\University.WebUI\bin\WebGrease.dll
+F:\University\University.WebUI\bin\WebMatrix.Data.dll
+F:\University\University.WebUI\bin\WebMatrix.WebData.dll
+F:\University\University.WebUI\bin\University.Domain.pdb
+F:\University\University.WebUI\bin\Ninject.pdb
+F:\University\University.WebUI\bin\Ninject.xml
+F:\University\University.WebUI\bin\EntityFramework.xml
+F:\University\University.WebUI\bin\Newtonsoft.Json.xml
+F:\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+F:\University\University.WebUI\bin\System.Web.Helpers.xml
+F:\University\University.WebUI\bin\System.Web.Http.xml
+F:\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+F:\University\University.WebUI\bin\System.Web.Mvc.xml
+F:\University\University.WebUI\bin\System.Web.Razor.xml
+F:\University\University.WebUI\bin\System.Web.WebPages.xml
+F:\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+F:\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+F:\University\University.WebUI\bin\WebMatrix.Data.xml
+F:\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\University\University.WebUI\bin\WebMatrix.WebData.xml
+F:\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+F:\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+F:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+F:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+F:\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\University\University.WebUI\bin\System.Web.Http.OData.xml
+F:\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+F:\University\University.WebUI\bin\Microsoft.Data.OData.xml
+F:\University\University.WebUI\bin\System.Spatial.xml
+F:\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\University\University.WebUI\bin\de\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\es\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\it\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+F:\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+F:\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+F:\University\University.WebUI\obj\Debug\University.WebUI.dll
+F:\University\University.WebUI\obj\Debug\University.WebUI.pdb
+G:\University\University.WebUI\bin\EntityFramework.SqlServer.dll
+G:\University\University.WebUI\bin\EntityFramework.SqlServer.xml
+G:\University\University.WebUI\bin\University.Domain.pdb
+D:\Other\Other\University\University.WebUI\bin\University.WebUI.dll.config
+D:\Other\Other\University\University.WebUI\bin\University.WebUI.dll
+D:\Other\Other\University\University.WebUI\bin\University.WebUI.pdb
+D:\Other\Other\University\University.WebUI\bin\Antlr3.Runtime.dll
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Other\Other\University\University.WebUI\bin\EntityFramework.dll
+D:\Other\Other\University\University.WebUI\bin\EntityFramework.SqlServer.dll
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Data.OData.dll
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Other\Other\University\University.WebUI\bin\Newtonsoft.Json.dll
+D:\Other\Other\University\University.WebUI\bin\Ninject.dll
+D:\Other\Other\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+D:\Other\Other\University\University.WebUI\bin\System.Spatial.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.Helpers.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.Http.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.Http.OData.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.Mvc.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.Optimization.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.Razor.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.WebPages.dll
+D:\Other\Other\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+D:\Other\Other\University\University.WebUI\bin\University.Domain.dll
+D:\Other\Other\University\University.WebUI\bin\WebGrease.dll
+D:\Other\Other\University\University.WebUI\bin\WebMatrix.Data.dll
+D:\Other\Other\University\University.WebUI\bin\WebMatrix.WebData.dll
+D:\Other\Other\University\University.WebUI\bin\University.Domain.pdb
+D:\Other\Other\University\University.WebUI\bin\EntityFramework.xml
+D:\Other\Other\University\University.WebUI\bin\EntityFramework.SqlServer.xml
+D:\Other\Other\University\University.WebUI\bin\Ninject.pdb
+D:\Other\Other\University\University.WebUI\bin\Ninject.xml
+D:\Other\Other\University\University.WebUI\bin\Newtonsoft.Json.xml
+D:\Other\Other\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.Helpers.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.Http.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.Mvc.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.Razor.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.WebPages.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+D:\Other\Other\University\University.WebUI\bin\WebMatrix.Data.xml
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Other\Other\University\University.WebUI\bin\WebMatrix.WebData.xml
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+D:\Other\Other\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Other\Other\University\University.WebUI\bin\System.Web.Http.OData.xml
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+D:\Other\Other\University\University.WebUI\bin\Microsoft.Data.OData.xml
+D:\Other\Other\University\University.WebUI\bin\System.Spatial.xml
+D:\Other\Other\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Other\Other\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Other\Other\University\University.WebUI\bin\de\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\es\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\it\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+D:\Other\Other\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+D:\Other\Other\University\University.WebUI\obj\Debug\University.WebUI.dll
+D:\Other\Other\University\University.WebUI\obj\Debug\University.WebUI.pdb
+D:\Other\Проект\University\University.WebUI\bin\University.WebUI.dll.config
+D:\Other\Проект\University\University.WebUI\bin\University.WebUI.dll
+D:\Other\Проект\University\University.WebUI\bin\University.WebUI.pdb
+D:\Other\Проект\University\University.WebUI\bin\Antlr3.Runtime.dll
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Other\Проект\University\University.WebUI\bin\EntityFramework.dll
+D:\Other\Проект\University\University.WebUI\bin\EntityFramework.SqlServer.dll
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Data.OData.dll
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Other\Проект\University\University.WebUI\bin\Newtonsoft.Json.dll
+D:\Other\Проект\University\University.WebUI\bin\Ninject.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Spatial.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Helpers.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Http.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Http.OData.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Mvc.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Optimization.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Razor.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.WebPages.dll
+D:\Other\Проект\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+D:\Other\Проект\University\University.WebUI\bin\University.Domain.dll
+D:\Other\Проект\University\University.WebUI\bin\WebGrease.dll
+D:\Other\Проект\University\University.WebUI\bin\WebMatrix.Data.dll
+D:\Other\Проект\University\University.WebUI\bin\WebMatrix.WebData.dll
+D:\Other\Проект\University\University.WebUI\bin\University.Domain.pdb
+D:\Other\Проект\University\University.WebUI\bin\EntityFramework.xml
+D:\Other\Проект\University\University.WebUI\bin\EntityFramework.SqlServer.xml
+D:\Other\Проект\University\University.WebUI\bin\Ninject.pdb
+D:\Other\Проект\University\University.WebUI\bin\Ninject.xml
+D:\Other\Проект\University\University.WebUI\bin\Newtonsoft.Json.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Helpers.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Http.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Mvc.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Razor.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.WebPages.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+D:\Other\Проект\University\University.WebUI\bin\WebMatrix.Data.xml
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Other\Проект\University\University.WebUI\bin\WebMatrix.WebData.xml
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+D:\Other\Проект\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Web.Http.OData.xml
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+D:\Other\Проект\University\University.WebUI\bin\Microsoft.Data.OData.xml
+D:\Other\Проект\University\University.WebUI\bin\System.Spatial.xml
+D:\Other\Проект\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\de\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\es\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\it\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+D:\Other\Проект\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+D:\Other\Проект\University\University.WebUI\obj\Debug\University.WebUI.dll
+D:\Other\Проект\University\University.WebUI\obj\Debug\University.WebUI.pdb
+D:\Other\Projects\University\University.WebUI\bin\University.WebUI.dll.config
+D:\Other\Projects\University\University.WebUI\bin\University.WebUI.dll
+D:\Other\Projects\University\University.WebUI\bin\University.WebUI.pdb
+D:\Other\Projects\University\University.WebUI\bin\Antlr3.Runtime.dll
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Other\Projects\University\University.WebUI\bin\EntityFramework.dll
+D:\Other\Projects\University\University.WebUI\bin\EntityFramework.SqlServer.dll
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Data.OData.dll
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Other\Projects\University\University.WebUI\bin\Newtonsoft.Json.dll
+D:\Other\Projects\University\University.WebUI\bin\Ninject.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Spatial.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Helpers.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Http.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Http.OData.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Mvc.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Optimization.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Razor.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.WebPages.dll
+D:\Other\Projects\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+D:\Other\Projects\University\University.WebUI\bin\University.Domain.dll
+D:\Other\Projects\University\University.WebUI\bin\WebGrease.dll
+D:\Other\Projects\University\University.WebUI\bin\WebMatrix.Data.dll
+D:\Other\Projects\University\University.WebUI\bin\WebMatrix.WebData.dll
+D:\Other\Projects\University\University.WebUI\bin\University.Domain.pdb
+D:\Other\Projects\University\University.WebUI\bin\EntityFramework.xml
+D:\Other\Projects\University\University.WebUI\bin\EntityFramework.SqlServer.xml
+D:\Other\Projects\University\University.WebUI\bin\Ninject.pdb
+D:\Other\Projects\University\University.WebUI\bin\Ninject.xml
+D:\Other\Projects\University\University.WebUI\bin\Newtonsoft.Json.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Helpers.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Http.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Mvc.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Razor.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.WebPages.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+D:\Other\Projects\University\University.WebUI\bin\WebMatrix.Data.xml
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Other\Projects\University\University.WebUI\bin\WebMatrix.WebData.xml
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+D:\Other\Projects\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Web.Http.OData.xml
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+D:\Other\Projects\University\University.WebUI\bin\Microsoft.Data.OData.xml
+D:\Other\Projects\University\University.WebUI\bin\System.Spatial.xml
+D:\Other\Projects\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\de\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\es\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\it\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+D:\Other\Projects\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+D:\Other\Projects\University\University.WebUI\obj\Debug\University.WebUI.dll
+D:\Other\Projects\University\University.WebUI\obj\Debug\University.WebUI.pdb
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\University.WebUI.dll.config
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\University.WebUI.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\University.WebUI.pdb
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\EntityFramework.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Data.OData.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Newtonsoft.Json.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Ninject.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Spatial.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Helpers.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Http.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Http.OData.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Mvc.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Optimization.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Razor.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.WebPages.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\University.Domain.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\WebGrease.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\WebMatrix.Data.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\WebMatrix.WebData.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\University.Domain.pdb
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\EntityFramework.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Ninject.pdb
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Ninject.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Newtonsoft.Json.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Helpers.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Http.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Mvc.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Razor.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.WebPages.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\WebMatrix.Data.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\WebMatrix.WebData.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Web.Http.OData.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\Microsoft.Data.OData.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\System.Spatial.xml
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\de\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\es\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\it\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\Igor\Desktop\University\University\University.WebUI\obj\Debug\University.WebUI.dll
+C:\Users\Igor\Desktop\University\University\University.WebUI\obj\Debug\University.WebUI.pdb
+C:\Users\Igor\Desktop\University\University.WebUI\bin\University.WebUI.dll.config
+C:\Users\Igor\Desktop\University\University.WebUI\bin\University.WebUI.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\University.WebUI.pdb
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.Core.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\EntityFramework.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Data.Edm.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Data.OData.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Newtonsoft.Json.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Ninject.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Spatial.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Helpers.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Http.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Http.OData.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Mvc.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Optimization.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Razor.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.WebPages.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\University.Domain.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\WebGrease.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\WebMatrix.Data.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\WebMatrix.WebData.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\University.Domain.pdb
+C:\Users\Igor\Desktop\University\University.WebUI\bin\EntityFramework.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Ninject.pdb
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Ninject.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Newtonsoft.Json.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Helpers.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Http.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Mvc.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Razor.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.WebPages.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\WebMatrix.Data.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\WebMatrix.WebData.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.Core.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Web.Http.OData.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Data.Edm.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\Microsoft.Data.OData.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\System.Spatial.xml
+C:\Users\Igor\Desktop\University\University.WebUI\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\de\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\es\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\fr\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\it\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ja\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ko\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\ru\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Igor\Desktop\University\University.WebUI\obj\Debug\University.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\Igor\Desktop\University\University.WebUI\obj\Debug\University.WebUI.dll
+C:\Users\Igor\Desktop\University\University.WebUI\obj\Debug\University.WebUI.pdb

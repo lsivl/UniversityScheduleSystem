@@ -1,0 +1,266 @@
+﻿@model University.WebUI.Models.ScheduleModel
+@{
+    ViewBag.Title = "Schedule";
+}
+
+<script>
+    $(document).ready(function () {
+        var typeData = $("#typeData").text();
+        var facultyId= $("#facultyId").text();
+        if (typeData == "faculty") {
+            $('#courseSelection').show();
+            $("#textSelection").fadeTo("slow", 1).queue(function () {
+                $("#b1").fadeTo("fast", 1)
+                .queue(function () {
+                    $("#b2").fadeTo("fast", 1)
+                        .queue(function () {
+                            $("#b3").fadeTo("fast", 1)
+                                .queue(function () {
+                                    $("#b4").fadeTo("fast", 1)
+                                        .queue(function () { $("#b5").fadeTo("fast", 1) })
+                                })
+                        })
+                })
+            })
+            $("#courseSelection input").click(function (e) {
+                e.preventDefault();
+                var url = '@Url.Content("~/")' + "Schedule/FacultyStreams";
+                var courseValue = $(e.target).val();
+                $.post(url, { id: facultyId, courseValue: courseValue }, function (result) {
+                    $("#courseSelection").fadeTo("slow", 0).queue(function () {
+                        $("#courseSelection").replaceWith(result).queue(function () {
+                            $("#courseSelection").fadeTo("slow", 1).queue(function () {
+                                StreamLevel();
+                            });
+                        });
+                    });
+                });
+            });
+        }
+        else if (typeData == "stream" || typeData == "group") {
+            $("#cathedraName").show();
+            $("#streamName").show();
+            url = '@Url.Content("~/")' + "Schedule/StreamGroups";
+            var streamId = $("#StreamId").text();
+            $.post(url, { streamId: streamId }, function (result) {
+                $("#groupSelection").replaceWith(result).queue(function () {
+                    $("#groupSelection").fadeTo("slow", 1).queue(function () {
+                        GroupLevel();
+                        if (typeData == "group")
+                        {
+                            var groupId = $("#GroupId").text();
+                            GroupSelectEvent(groupId);
+                        }
+                    })
+                });
+            });
+        }
+        else if ((typeData == "teacher") || (typeData == "classroom") || (typeData == "cathedra")) {
+            var IdOb;
+            if (typeData == "teacher") IdOb = $("#teacherId").text();
+            else if (typeData == "classroom") IdOb = $("#classroomId").text();
+            else if (typeData == "cathedra") IdOb = $("#cathedraId").text();
+            url = '@Url.Content("~/")' + "Schedule/TeacherClassroom";
+            var datatype = $("#typeData").text();
+            $.post(url, { id: IdOb, TypeData: datatype }, function (result) {
+                $("#teacherClassroomInformation").replaceWith(result).queue(function () {
+                    $("#teacherClassroomInformation").fadeTo("slow", 1).queue(function () {
+                        TeacherClassroomLevel()
+                    })
+                });
+            });
+        }
+    });
+        @*else if (typeData == "cathedra") {
+            $('#TypeCathedraSelection').show();
+            $("#textCathedraSelection").fadeTo("slow", 1).queue(function () {
+                $("#teacher").fadeTo("slow", 1)
+                .queue(function () {
+                    $("#classroom").fadeTo("slow", 1)})
+
+            })
+            $("#TypeCathedraSelection input").click(function (e) {
+                  e.preventDefault();
+            $("#shellTable").fadeTo("slow", 0);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+            var dataType = $("#typeData").text();
+            var secontType = this.id;    
+            var IdValue = $("#cathedraId").text();
+            $.post(url, { Id: IdValue, typeData: dataType, secondTypeData: secontType }, function (result) {
+                $("#scheduleTable").replaceWith(result).queue(function () {
+                    $("#indicator").fadeTo("fast", 0);
+                    $("#shellTable").fadeTo("slow", 1);
+                    $("#indicator").hide();
+                });
+            });
+            });
+        })*@
+
+
+
+
+    function StreamLevel() {
+        $("#courseSelection input").click(function (e) {
+            e.preventDefault();
+            $("#courseSelection input").removeClass();
+            $("#courseSelection input").addClass("ButtonCourse");
+            $("#" + this.id).toggleClass("ButtonCourseSelected");
+            $("#shellTable").fadeTo("slow", 0);
+            url = '@Url.Content("~/")' + "Schedule/StreamGroups";
+                var streamId = this.id;
+                $.post(url, { streamId: streamId }, function (result) {
+                    $("#groupSelection").replaceWith(result).queue(function () {
+                        $("#groupSelection").fadeTo("slow", 1).queue(function () {
+                            GroupLevel();
+                        })
+                    });
+                }); 
+            });
+        }
+
+        function GroupLevel() {
+            $("#groupSelection input").click(function (e) {
+                e.preventDefault();
+                GroupSelectEvent(this.id);
+            });
+
+        }
+        
+        function GroupSelectEvent(groupID) {
+        $("#groupSelection input").removeClass();
+        $("#groupSelection input").addClass("ButtonCourse");
+        $("#" + groupID).toggleClass("ButtonCourseSelected");
+        $("#shellTable").fadeTo("slow", 0);
+        $("#indicator").show();
+        $("#indicator").fadeTo("fast", 1);
+        $("#indicator").css("text-align", "center");
+        url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+        var groupId = groupID;
+        var dataType = $("#typeData").text();
+        $.post(url, { Id: groupId, typeData: dataType }, function (result) {
+            $("#scheduleTable").replaceWith(result).queue(function () {
+                $("#indicator").fadeTo("fast", 0);
+                $("#shellTable").fadeTo("slow", 1);
+                $("#indicator").hide();
+            });
+        });
+    }
+   
+
+        function TeacherClassroomLevel() {
+            $(document).ready(function () {
+                var url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+                var Id;
+                var typeData = $("#typeData").text();
+                if (typeData == "teacher") Id = $("#teacherId").text();
+                else if (typeData == "classroom") Id = $("#classroomId").text();
+                else if (typeData == "cathedra")  Id = $("#cathedraId").text();
+                if (typeData != "cathedra")
+                {
+                    $("#shellTable").fadeTo("slow", 0);
+                    $("#indicator").show();
+                    $("#indicator").fadeTo("fast", 1);
+                    $("#indicator").css("text-align", "center");
+                    $.post(url, { Id: Id, typeData: typeData }, function (result) {
+                        $("#scheduleTable").replaceWith(result).queue(function () {
+                            $("#indicator").fadeTo("fast", 0);
+                            $("#shellTable").fadeTo("slow", 1);
+                            $("#indicator").hide();
+                        });
+                    });
+                }
+                else 
+                {
+                    CathedraLevel();
+                }
+            });
+        }
+
+    function CathedraLevel() {
+        $('#TypeCathedraSelection').show();
+        $("#textCathedraSelection").fadeTo("slow", 1).queue(function () {
+            $("#teacher").fadeTo("slow", 1)
+            .queue(function () {
+                $("#classroom").fadeTo("slow", 1)
+            })
+
+        })
+        $("#TypeCathedraSelection input").click(function (e) {
+            e.preventDefault();
+            $("#shellTable").fadeTo("slow", 0);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+            var dataType = $("#typeData").text();
+            var secontType = this.id;
+            var IdValue = $("#cathedraId").text();
+            $.post(url, { Id: IdValue, typeData: dataType, secondTypeData: secontType }, function (result) {
+                $("#scheduleTable").replaceWith(result).queue(function () {
+                    $("#indicator").fadeTo("fast", 0);
+                    $("#shellTable").fadeTo("slow", 1);
+                    $("#indicator").hide();
+                });
+            });
+        });
+
+    }
+
+
+
+</script>
+
+<div id="teacherClassroomInformation" style="display:none">
+
+</div>
+
+<h2 style="text-align:center">Факультет: @Model.FacultyName</h2>
+<h4 id="streamName" style="display: none; text-align:center">Потік: @Model.StreamName</h4>
+<p id="facultyId" style="display:none">@Model.FacultyId</p>
+<p id="cathedraId" style="display:none">@Model.CathedraID</p>
+<p id="typeData" style="display:none">@Model.TypeData</p>
+<p id="facultyName" style="display:none">@Model.FacultyName</p>
+<p id="cathedraName" style="display:none">@Model.CathdraName</p>
+<p id="TeacherName" style="display:none">@Model.TeacherName</p>
+<p id="teacherId" style="display:none">@Model.TeacherId</p>
+<p id="TypeDataNumver" style="display:none">@Model.TypeDataNumber</p>
+@*<p id="StreamName" style="display:none">@Model.StremName</p>*@
+<p id="StreamId" style="display:none">@Model.StreamId</p>
+<p id="GroupId" style="display:none">@Model.GroupId</p>
+<p id="ClassroomName" style="display:none">@Model.ClassroomName</p>
+<p id="classroomId" style="display:none">@Model.ClassroomId</p>
+<p id="GrupName" style="display:none">@Model.GroupName</p>
+
+
+<div id="courseSelection" style="display:none; text-align:center">
+    <h4 id="textSelection" style="text-align:center; opacity:0">Виберіть курс:</h4>
+    <input id="b1" type="button" class="ButtonCourse" style="opacity:0" value="1 курс" />
+    <input id="b2" type="button" class="ButtonCourse" style="opacity:0" value="2 курс" />
+    <input id="b3" type="button" class="ButtonCourse" style="opacity:0" value="3 курс" />
+    <input id="b4" type="button" class="ButtonCourse" style="opacity:0" value="4 курс" />
+    <input id="b5" type="button" class="ButtonCourse" style="opacity:0" value="5 курс" />
+</div>
+
+
+<div id="TypeCathedraSelection" style="display:none; text-align:center">
+    <h4 id="textCathedraSelection" style="text-align:center; opacity:0">Виберіть тип розкладу:</h4>
+    <input id="teacher" type="button" class="ButtonCourse" style="opacity:0" value="Розклад викладачів" />
+    <input id="classroom" type="button" class="ButtonCourse" style="opacity:0" value="Розклад аудиторій" />
+</div>
+
+
+<div id="groupSelection" style="text-align:center; opacity: 0">
+
+</div>
+
+<div id="indicator" style="display:none; text-align:center; opacity: 0">
+    <p style="font-style:oblique; text-align:center">Завантажується розклад. Зачекайте будь ласка...</p>
+    <img id="indicatorImg" src="@Url.Content("~/Content/loading.gif")" alt="loading..." />
+</div>
+
+<div id="shellTable" style="text-align:center; opacity:1">
+    <div id="scheduleTable" style="text-align:center;"></div>
+</div>

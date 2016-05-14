@@ -1,0 +1,13 @@
+﻿@model University.WebUI.Models.ExportToExcelModel
+
+
+
+<div id="generalTable" style="margin: 0 auto; text-align: center; opacity: 0">
+    @*<p id="path" style="display:none">@Model.Path</p>*@
+    @*<a id="downloadFile" class="button button-green" href="@Model.Path">Завантажити файл</a>*@
+    @*<input id="downloadFile" type="submit" class="button button-red" value="Завантажити файл" />*@
+    @using (Html.BeginForm("FileScheduleResult", "Home", new { convertedName = @Model.ConvertedTemplate, fileName = @Model.FileName }, FormMethod.Post))
+    {
+        <input type="submit" class="button button-green" style="width:200px" value="Завантажити файл" />
+    }
+</div>

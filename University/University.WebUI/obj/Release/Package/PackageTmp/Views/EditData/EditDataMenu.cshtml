@@ -1,0 +1,190 @@
+﻿
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnFileUpload").click(function () {
+            var formData = new FormData();
+            $("#resultTable").fadeTo("slow", 0);
+            var file = document.getElementById("fileInput").files[0];
+            var type = $("#excelLoad").find('input[type=radio]:checked').filter(':first').val();
+            formData.append("typeData", type);
+            formData.append("fileInput", file);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $.ajax({
+                url: '@Url.Content("~/")' + "EditData/Upload",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    $("#resultTable").replaceWith(result).queue(function () {
+                        $("#indicator").fadeTo("fast", 0);
+                        $("#resultTable").fadeTo("slow", 1);
+                        $("#indicator").hide();
+                    });
+                    //alert("URA");
+                }
+            });
+        });
+        $("#textSelection").fadeTo("slow", 1).queue(function () {
+            $("#loadExcel").fadeTo("fast", 1)
+            .queue(function () {
+                $("#createObject").fadeTo("fast", 1);
+            })
+        });
+        $("#loadExcel").click(function (e) {
+            e.preventDefault();
+            $("#selectMenu").fadeTo("fast", 0);
+            $("#selectMenu").hide();
+            $("#excelLoad").fadeTo("fast", 1);
+        });
+        $("#createObject").click(function (e) {
+            e.preventDefault();
+            $("#selectMenu").fadeTo("fast", 0);
+            $("#selectMenu").hide();
+            $("#objectSelection").show();
+            $("#objectSelection").fadeTo("fast", 1);
+            $("#typeSelection").fadeTo("slow", 1).queue(function () {
+                $("#t1").fadeTo("fast", 1)
+                .queue(function () {
+                    $("#t2").fadeTo("fast", 1)
+                        .queue(function () {
+                            $("#t3").fadeTo("fast", 1)
+                                .queue(function () {
+                                    $("#t4").fadeTo("fast", 1)
+                                        .queue(function () {
+                                            $("#t5").fadeTo("fast", 1)
+                                                .queue(function () {
+                                                    $("#t6").fadeTo("fast", 1)
+                                                })
+                                        })
+                                })
+                        })
+                })
+            })
+        });
+
+        $("#excelLoad input").click(function (e) {
+            $("#typeLoad").val($("input:checkbox:checked").val());
+        });
+
+        $("#cathedraList").select2({ maximumSelectionSize: 1, placeholder: "Нічого не вибрано..." });
+
+
+
+    })
+
+</script>
+
+
+
+<div id="selectMenu" style="text-align: center">
+    <h3 id="textSelection" style="text-align:center; opacity:0">Виберіть сервіс:</h3>
+    <input id="loadExcel" type="button" class="ButtonCourse" style="width: 300px; opacity:0" value="Завантаження даних з Excel-файлу" />
+    <input id="createObject" type="button" class="ButtonCourse" style="width: 300px; opacity: 0" value="Створення даних вручну" />
+</div>
+
+
+
+<div id="objectSelection" style="display:none; text-align:center">
+    <h4 id="typeSelection" style="text-align:center; opacity:0">Виберіть тип об'єкту для створення:</h4>
+    @using (Html.BeginForm("EditObject", "EditData", FormMethod.Post))
+    {
+        @Html.Hidden("id", -1)
+        @Html.Hidden("typeObject", "faculty")
+        <input id="t1" type="submit" class="ButtonCourse" style="width: 150px; opacity: 0" value="Факультет" />
+    }
+    @using (Html.BeginForm("EditObject", "EditData", FormMethod.Post))
+    {
+        @Html.Hidden("id", -1)
+        @Html.Hidden("typeObject", "cathedra")
+        <input id="t2" type="submit" class="ButtonCourse" style="width: 150px; opacity: 0" value="Кафедра" />
+    }
+    @using (Html.BeginForm("EditObject", "EditData", FormMethod.Post))
+    {
+        @Html.Hidden("id", -1)
+        @Html.Hidden("typeObject", "teacher")
+        <input id="t3" type="submit" class="ButtonCourse" style="width: 150px; opacity: 0" value="Викладач" />
+    }
+    @using (Html.BeginForm("EditObject", "EditData", FormMethod.Post))
+    {
+        @Html.Hidden("id", -1)
+        @Html.Hidden("typeObject", "classroom")
+        <input id="t4" type="submit" class="ButtonCourse" style="width: 150px; opacity: 0" value="Аудиторія" />
+    }
+    @using (Html.BeginForm("EditObject", "EditData", FormMethod.Post))
+    {
+        @Html.Hidden("id", -1)
+        @Html.Hidden("typeObject", "stream")
+        <input id="t5" type="submit" class="ButtonCourse" style="width: 150px; opacity: 0" value="Потік" />
+    }
+    @using (Html.BeginForm("EditObject", "EditData", FormMethod.Post))
+    {
+        @Html.Hidden("id", -1)
+        @Html.Hidden("typeObject", "group")
+        <input id="t6" type="submit" class="ButtonCourse" style="width: 150px; opacity: 0" value="Група" />
+    }
+</div>
+
+
+
+<div id="excelLoad" style="text-align: center; opacity: 0">
+    <table align="left" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+        <tr>
+            <th>Тип завантаження</th>
+        </tr>
+        <tr>
+            <td><label style="text-align:left"><input id="selectService1" value="1" onclick="changeSHift(this);" type="radio" name="option" checked />Навантаження  </label></td>
+        </tr>
+        <tr class='even'>
+            <td><label style="text-align:left"><input id="selectService2" value="2" onclick="changeSHift(this);" type="radio" name="option" />Потік </label></td>
+        </tr>
+    </table>
+
+    @*<div style="text-align:center">
+            <h4>Виберіть кафедру, відносно якої буде здійснюватись завантаження даних:</h4>
+            <select  tabindex="-1" style="width: 35%" id="cathedraList">
+                @foreach (var cathedra in @Model)
+                {
+                    <option value="@cathedra.CathedraID">@cathedra.Name (@cathedra.FullName)</option>
+                }
+            </select>
+        </div>*@
+    <br />
+    <body>
+        @*<h1>Навантаження по кафедрам</h1>*@
+        <div id="uploadMenu" style="text-align:center">
+            <h4>Виберіть excel-файл для завантаження інформації:</h4>
+            <form id="fileUpload" action="@Url.Action("Upload")" method="POST" enctype="multipart/form-data">
+                <input id="fileInput" type="file" accept="application/vnd.ms-excel" />
+                <input type="button" class="myButton" value="Завантажити файл" id="btnFileUpload" />
+                <br />
+                <input id="typeLoad" type="text" value="" style="visibility:hidden" />
+            </form>
+        </div>
+    </body>
+
+    <div id="indicator" style="display:none; text-align:center; opacity: 0">
+        <p style="font-style:oblique; text-align:center">Завантажуються дані. Зачекайте будь ласка...</p>
+        <img id="indicatorImg" src="@Url.Content("~/Content/loading.gif")" alt="loading..." />
+    </div>
+
+    <div id="resultTable" style="text-align:center; opacity: 0">
+
+    </div>
+
+</div>
+
+
+
+
+@*@using (Html.BeginForm("Upload", "EditData", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <fieldset>
+        <legend>Upload a file</legend>
+        <div class="editor-field"> @Html.TextBox("file", "", new { type = "file" }) </div>
+        <div class="editor-field"> <input type="submit" value="Завантажити" /> </div>
+        </fieldset>
+    }*@ 

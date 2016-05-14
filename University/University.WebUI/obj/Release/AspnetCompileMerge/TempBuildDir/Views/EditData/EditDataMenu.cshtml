@@ -1,0 +1,72 @@
+﻿@model  List<University.Domain.Models.Cathedra>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnFileUpload").click(function () {
+            var formData = new FormData();
+            var file = document.getElementById("fileInput").files[0];
+            formData.append("fileInput", file);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $.ajax({
+                url: '@Url.Content("~/")' + "EditData/Upload",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    $("#resultTable").replaceWith(result).queue(function () {
+                        $("#indicator").fadeTo("fast", 0);
+                        $("#resultTable").fadeTo("slow", 1);
+                        $("#indicator").hide();
+                    });
+                    //alert("URA");
+                }
+            });
+        });
+        $("#cathedraList").select2({ maximumSelectionSize: 1, placeholder: "Нічого не вибрано..." });
+    })
+    
+
+</script>
+
+
+<div style="text-align:center">
+    <h4>Виберіть кафедру, відносно якої буде здійснюватись завантаження даних:</h4>
+    <select  tabindex="-1" style="width: 35%" id="cathedraList">
+        @foreach (var cathedra in @Model)
+        {
+            <option value="@cathedra.CathedraID">@cathedra.Name (@cathedra.FullName)</option>
+        }
+    </select>
+</div>
+<br />
+<body>
+    <div id="uploadMenu" style="text-align:center">
+        <h4>Виберіть excel-файл для завантаження інформації:</h4>
+        <form id="fileUpload" action="@Url.Action("Upload")" method="POST" enctype="multipart/form-data">
+            <input id="fileInput" type="file" />
+            <input type="button" class="myButton" value="Завантажити файл" id="btnFileUpload" />
+        </form>
+    </div>
+</body>
+
+<div id="indicator" style="display:none; text-align:center; opacity: 0">
+    <p style="font-style:oblique; text-align:center">Завантажуються дані. Зачекайте будь ласка...</p>
+    <img id="indicatorImg" src="@Url.Content("~/Content/loading.gif")" alt="loading..." />
+</div>
+
+<div id="resultTable" style="text-align:center; opacity: 0">
+
+</div>
+
+
+@*@using (Html.BeginForm("Upload", "EditData", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <fieldset>
+        <legend>Upload a file</legend>
+        <div class="editor-field"> @Html.TextBox("file", "", new { type = "file" }) </div>
+        <div class="editor-field"> <input type="submit" value="Завантажити" /> </div>
+        </fieldset>
+    }*@ 

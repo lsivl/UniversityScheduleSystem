@@ -1,0 +1,193 @@
+﻿@model University.WebUI.Models.GeneralInformation
+
+<script>
+    $(document).ready(function () {
+        $("#ExportToExcel").click(function (e) {
+            $("#generalTable").fadeTo("slow", 0);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            var facultyid = $("#facultyId").text();
+            url = '@Url.Content("~/")' + "Home/ExportToExcel";
+            $.post(url, { FacultyID: facultyid }, function (result) {
+                $("#indicator").fadeTo("slow", 0).queue(function () {
+                    $("#indicator").hide();
+                        });
+            });
+        });
+    });
+</script>
+
+<div id="generalTable" style="margin: 0 auto; text-align:center">
+    <p id="facultyId" style="display:none">@Model.FacultyID</p>
+    @if (@Model.typeInformation == "stream")
+    {
+        <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>Назва потоку: </th>
+                <th>@Model.StreamName </th>
+            </tr><!-- Table Header -->
+
+            <tr>
+                <td>Групи потоку: </td>
+                <td>
+                    @for (int i = 0; i < @Model.StreamGroups.Count; i++)
+                    {
+                        if ((i + 1) != @Model.StreamGroups.Count)
+                        {
+                            @(Model.StreamGroups[i] + ", ")
+                        }
+                        else
+                        { @Model.StreamGroups[i] }
+                    }
+                </td>
+            </tr><!-- Table Row -->
+
+            <tr class='even'>
+                <td>Рік навчання: </td>
+                <td>@Model.StreamYearOfStudy </td>
+            </tr><!-- Darker Table Row --> 
+
+
+            <tr class='even'>
+                <td>Факультет: </td>
+                <td>@Model.FacultyName (@Model.FullFacultyName)</td>
+            </tr>
+
+            <tr>
+                <td>Загальна кількість студентів: </td>
+                <td>@Model.StreamStudentsCount</td>
+            </tr>
+        </table>
+        using (Html.BeginForm("Schedule", "Schedule", FormMethod.Post))
+        {
+            @Html.Hidden("name", @Model.StreamName)
+            @Html.Hidden("TypeData", @Model.typeInformation)
+            <input type="submit" class="button button-green" value="Перейти до розкладу" />
+        }
+    } else if (Model.typeInformation == "faculty") { 
+    <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+        <tr>
+            <th>Назва факультету: </th>
+            <th>@Model.FacultyName (@Model.FullFacultyName) </th>
+        </tr><!-- Table Header -->
+
+        <tr>
+            <td>Кафедри факультету: </td>
+            <td>
+                @for (int i = 0; i < @Model.FacultyDepartments.Count; i++)
+                {
+                    if ((i + 1) != @Model.FacultyDepartments.Count)
+                    {
+                        @(Model.FacultyDepartments[i] + ", ")
+                    }
+                    else
+                    { @Model.FacultyDepartments[i] }
+                }
+            </td>
+    </table>
+        using (Html.BeginForm("Schedule", "Schedule", FormMethod.Post))
+        {
+            @Html.Hidden("name", @Model.FacultyName)
+            @Html.Hidden("TypeData", @Model.typeInformation)
+    <input type="submit" class="button button-green" style="width:200px" value="Перейти до розкладу" />
+        }
+        <input id="ExportToExcel" type="submit" class="button button-green" style="width:200px" value="Відобразити у MS Excel" />
+    }
+    else if (Model.typeInformation == "teacher")
+    {
+        <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>ПІБ викладача: </th>
+                <th>@Model.TeacherName </th>
+            </tr><!-- Table Header -->
+
+            <tr>
+                <td>Кафедра: </td>
+                <td>@Model.CathedraName (@Model.FullCathedraName)  </td>
+            </tr><!-- Table Row -->
+
+            <tr class='even'>
+                <td>Факультет: </td>
+                <td>@Model.FacultyName (@Model.FullFacultyName) </td>
+            </tr><!-- Darker Table Row --> 
+
+            <tr>
+                <td>Посада: </td>
+                <td>@Model.TeacherPost</td>
+            </tr>
+        </table>
+        using (Html.BeginForm("Schedule", "Schedule", FormMethod.Post))
+        {
+            @Html.Hidden("name", @Model.TeacherName)
+            @Html.Hidden("TypeData", @Model.typeInformation)
+            <input type="submit" class="button button-green" value="Перейти до розкладу" />
+        }
+        
+    }
+    else if (Model.typeInformation == "classroom")
+    {
+        <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>Назва аудиторії: </th>
+                <th>@Model.ClassroomName </th>
+            </tr><!-- Table Header -->
+
+            <tr>
+                <td>Тип аудиторії: </td>
+                <td>@Model.ClassrommType  </td>
+            </tr><!-- Table Row -->
+
+            <tr class='even'>
+                <td>Максимальна місткість студентів: </td>
+                <td>@Model.ClassroomCapacity </td>
+            </tr><!-- Darker Table Row -->
+
+            <tr>
+                    <td>Кафедра: </td>
+                    <td>@Model.CathedraName (@Model.FullCathedraName)</td>
+            </tr>
+
+            <tr class='even'>
+                <td>Факультет: </td>
+                <td>@Model.FacultyName (@Model.FullFacultyName) </td>
+            </tr><!-- Darker Table Row -->
+        </table>
+        using (Html.BeginForm("Schedule", "Schedule", FormMethod.Post))
+        {
+            @Html.Hidden("name", @Model.ClassroomName)
+            @Html.Hidden("TypeData", @Model.typeInformation)
+            <input type="submit" class="button button-green" value="Перейти до розкладу" />
+         
+        }@*<a id="Schedule" href="@Url.Action("Schedule", "Schedule")" class="button button-green"><span>Перейти до розкладу</span></a>*@
+
+
+    } else if (Model.typeInformation == "cathedra")
+    {
+        <table align="center" class="simple-little-table" style="margin: 0 auto" cellspacing='0'>
+            <tr>
+                <th>Назва кафедри: </th>
+                <th>@Model.CathedraName (@Model.FullCathedraName) </th>
+            </tr><!-- Table Header -->
+
+            <tr>
+                <td>Факультет: </td>
+                <td>@Model.FacultyName  </td>
+            </tr><!-- Table Row -->
+
+        </table>
+        using (Html.BeginForm("Schedule", "Schedule", FormMethod.Post))
+        {
+            @Html.Hidden("name", @Model.CathedraName)
+            @Html.Hidden("TypeData", @Model.typeInformation)
+            <input type="submit" class="button button-green" value="Перейти до розкладу" />
+
+        }@*<a id="Schedule" href="@Url.Action("Schedule", "Schedule")" class="button button-green"><span>Перейти до розкладу</span></a>*@
+
+
+    }
+
+   
+    
+
+</div>

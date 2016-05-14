@@ -1,0 +1,30 @@
+﻿<script>
+        $("#logOff").click(e)
+        {
+            var url = '@Url.Action("LogOut","Account")'
+            $.post(url, function () {
+                //$("#login").replaceWith(result);
+                var l = window.location;
+                window.location = l;
+            })
+        }
+</script>
+@if (Request.IsAuthenticated)
+{
+    <text>
+        Вітаємо Вас, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+        @using (Html.BeginForm("LogOut", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <a id="logOff" href="javascript:document.getElementById('logoutForm').submit()">Вийти </a>
+        }
+    </text>
+}
+else
+{
+    <ul>
+        <li>@Html.ActionLink("Реєстрація", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Увійти", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+

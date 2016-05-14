@@ -1,0 +1,14 @@
+﻿@model List<University.Domain.Models.Group>
+
+
+<div id="groupSelection" style="text-align:center; opacity:0">
+    @*@for (int i = 0; i < @Model.Count; i++)
+        {
+            <input id="stream_@i" type="button" class="ButtonCourse" style="opacity:1" value="@Model[i]." />
+        }*@
+    <h4>Групи потоку:</h4>
+    @foreach (var item in @Model)
+    {
+        <input id="@item.GroupID" type="button" class="ButtonCourse" value="@item.GroupName" />
+    }
+</div>

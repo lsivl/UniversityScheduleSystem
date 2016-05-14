@@ -1,0 +1,137 @@
+﻿@model List<SelectListItem>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<script>
+    $(document).ready(function () {
+        $("#dropList").change(function (e) {
+            e.preventDefault();
+            ChangeDataLevel();
+        });
+    });
+
+    function ChangeDataLevel() {
+        $("#table").fadeTo("slow", 0);
+        var url = '@Url.Content("~/")' + "Home/ChangeData";
+        var ddlsource = "#dropList";
+        var ddltarget = "#select";
+        var data = "#json";
+        $.post(url, { typeData: $(ddlsource).val(), _model: $(data).val() }, function (result) {
+            $(ddltarget).empty();
+            $("#select").append(result);
+            $("#e19").select2({ maximumSelectionSize: 1, placeholder: "Поле для пошуку..." });
+            $("#e19").change(function (e) {
+                e.preventDefault();
+                var url = '@Url.Content("~/")' + "Home/CreateTable";
+                var ddlsource = $("li.select2-search-choice").text();
+                var ddlsource1 = "#dropList";
+                var ddltarget = "#table";
+                if (ddlsource.trim() != "") {
+                    $.post(url, { name: ddlsource, typeData: $(ddlsource1).val() }, function (result) {
+                        $(ddltarget).empty();
+                        $(ddltarget).append(result);
+                        $("#table").fadeTo("slow", 1);
+                        CreateTableLevel();
+                    });
+                }
+                else if (ddlsource.trim() == "") { $("#table").fadeTo("slow", 0); }
+            });
+        });
+    }
+
+    function CreateTableLevel() {
+        $("#ExportToExcel").click(function (e) {
+            $("#generalTable").fadeTo("slow", 0);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            var facultyid = $("#facultyId").text();
+            url = '@Url.Content("~/")' + "Home/ExportToExcel";
+            $.post(url, { FacultyID: facultyid }, function (result) {
+                $("#generalTable").replaceWith(result).queue(function () {
+                    $("#indicator").fadeTo("fast", 0);
+                    $("#generalTable").fadeTo("slow", 1);
+                    $("#indicator").hide();
+                    ExportToExcelLevel();
+                });
+            });
+        });
+    }
+
+    function ExportToExcelLevel() {
+        $("#downloadFile").click(function (e) {
+            e.preventDefault();
+            window.location.href = $("#path").text();;
+            ChangeDataLevel();
+            //stop the browser from following
+
+        });
+    }
+
+
+    $(document).ready(function () {
+        $("#e19").select2({ maximumSelectionSize: 1, placeholder: "Поле для пошуку..." })
+    });
+
+    @*$(document).ready(function () {
+        $("#e19").change(function (e) {
+            e.preventDefault();
+            $("#indicator").show();
+            var url = '@Url.Content("~/")' + "Home/CreateTable";
+            var ddlsource = "#e19";
+            var ddlsource1 = "#dropList";
+            var ddltarget = "#table";
+            $.post(url, { name: $(ddlsource).val(), typeData: $(ddlsource1).val() }, function (result) {
+                $("#indicator").hide();
+                $(ddltarget).empty();
+                $(ddltarget).append(result);
+            });
+        });
+    });*@
+
+
+
+</script>
+
+@*<script id="speakerTemplate" type="text/x-jquery-tmpl">
+        <select multiple id="e19"  style="width: 500px" tabindex="-1">
+            <option value=${Name}>${Name}</option>
+        </select>
+    </script>*@
+
+<div>
+    <h4>Виберіть категорію пошуку:</h4>
+    <select style="width: 250px" id="dropList">
+        <option selected disabled>Нічого не вибрано</option>
+        <option value="faculty">Факультет</option>
+        <option value="stream">Потік(курс)</option>
+        <option value="teacher">Викладач</option>
+        <option value="classroom">Аудиторія</option>
+        <option value="cathedra">Кафедра</option>
+    </select>
+</div>
+
+
+
+<div>
+    <h3 style="text-align:center">Введіть текст запросу:</h3>
+
+
+
+    <p id="select" style="text-align: center">
+        <select multiple id="e19" style="width: 40%" tabindex="-1"></select>
+
+    </p>
+
+</div>
+
+
+<div id="indicator" style="display:none; text-align:center; opacity: 0">
+    <p style="font-style:oblique; text-align:center">Завантажується розклад. Зачекайте будь ласка...</p>
+    <img id="indicatorImg" src="@Url.Content("~/Content/loading.gif")" alt="loading..." />
+</div>
+
+
+<div id="table" style="vertical-align: middle; width: 100%; height: 401px; margin: 0 auto; text-align:center"></div>

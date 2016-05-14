@@ -1,0 +1,10 @@
+D:\Other\Projects\University\University.Domain\bin\Release\University.Domain.dll.config
+D:\Other\Projects\University\University.Domain\bin\Release\University.Domain.dll
+D:\Other\Projects\University\University.Domain\bin\Release\University.Domain.pdb
+D:\Other\Projects\University\University.Domain\bin\Release\EntityFramework.dll
+D:\Other\Projects\University\University.Domain\bin\Release\EntityFramework.SqlServer.dll
+D:\Other\Projects\University\University.Domain\bin\Release\EntityFramework.xml
+D:\Other\Projects\University\University.Domain\bin\Release\EntityFramework.SqlServer.xml
+D:\Other\Projects\University\University.Domain\obj\Release\University.Domain.dll
+D:\Other\Projects\University\University.Domain\obj\Release\University.Domain.pdb
+D:\Other\Projects\University\University.Domain\obj\Release\University.Domain.csprojResolveAssemblyReference.cache

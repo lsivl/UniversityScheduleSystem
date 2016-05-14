@@ -1,0 +1,135 @@
+﻿@model University.WebUI.Models.DayModel
+
+
+
+<h5>@Model.DayName</h5>
+<table id="mainTable" class="simple-little-table" cellspacing='0'>
+    <tr>
+        <th><font size="1"><span>№ пари</span></font></th>
+        <th><font size="1"><span>Тип пари</span></font></th>
+        <th><font size="1"><span>Предмет</span></font></th>
+        <th><font size="1"><span>Викладач</span></font></th>
+        <th><font size="1"><span>Аудиторія</span></font></th>
+    </tr>
+    @for (int i = @Model.FirstLesson; i < @Model.FirstLesson + 3; i++)
+    {
+        <tr id="@Model.WeekNum-@Model.DayNumber-@i">
+            <td id="@Model.WeekNum-@Model.DayNumber-@(i)-@(1)">
+                @if (Model.DayLessons[i - 1].LessonType != null)
+                {
+                    <p><input id="deleteButton" onclick="deleteLesson(this);" type="submit" class="deleteButton" value="X" /> @i</p>
+                }
+                else
+                {
+                    <p><input type="submit" class="notActiveDeleteButton" value="X" /> @i</p>
+                }
+            </td>
+            <td id="@Model.WeekNum-@Model.DayNumber-@i-@(2)">
+                @try
+                {
+                    if (Model.DayLessons[i - 1].LessonType != null)
+                    {
+                        <select name="TypeLesson" style="width: 150px">
+                            <option value="@Model.DayLessons[i - 1].LessonTypeID" disabled selected>@Model.DayLessons[i - 1].LessonType</option>
+                            <option value="1">Лекція</option>
+                            <option value="2">Практика</option>
+                            <option value="3">Лабораторна</option>
+                        </select>
+                    }
+                    else if (Model.DayLessons[i - 1].LessonType == null)
+                    {
+                        <select name="TypeLesson" style="width: 150px">
+                            <option disabled selected>Виберіть тип пари</option>
+                            <option value="1">Лекція</option>
+                            <option value="2">Практика</option>
+                            <option value="3">Лабораторна</option>
+                        </select>
+                    }
+                }
+                catch (Exception)
+                {
+                    <select name="TypeLesson" style="width: 150px">
+                        <option disabled selected>Виберіть тип пари</option>
+                        <option value="1">Лекція</option>
+                        <option value="2">Практика</option>
+                        <option value="3">Лабораторна</option>
+                    </select>
+                }
+            </td>
+
+            <td id="@Model.WeekNum-@Model.DayNumber-@i-@(3)">
+                @try
+                {
+                    if (Model.DayLessons[i - 1].Subject != null)
+                    {
+                        <select name="Subject" style="width: 150px">
+                            <option disabled value="@Model.DayLessons[i - 1].SubjectID" selected>@Model.DayLessons[i - 1].Subject</option>
+                        </select>
+                    }
+                    else if (Model.DayLessons[i - 1].Subject == null)
+                    {
+                        <select disabled name="Subject" style="width: 150px">
+                            <option disabled selected>Не вказано</option>
+                        </select>
+                    }
+
+                }
+                catch (Exception)
+                {
+                    <select disabled name="Subject" style="width: 150px">
+                        <option disabled selected>Не вказано</option>
+                    </select>
+                }
+            </td>
+
+            <td id="@Model.WeekNum-@Model.DayNumber-@i-@(4)">
+                @try
+                {
+                    if (Model.DayLessons[i - 1].Teacher != null)
+                    {
+                        <select name="Teacher" style="width: 150px">
+                            <option disabled value="@Model.DayLessons[i - 1].TeacherID" selected>@Model.DayLessons[i - 1].Teacher</option>
+                        </select>
+                    }
+                    else if (Model.DayLessons[i - 1].Teacher == null)
+                    {
+                        <select disabled name="Teacher" style="width: 150px">
+                            <option disabled selected>Не вказано</option>
+                        </select>
+                    }
+                }
+                catch (Exception)
+                {
+                    <select disabled name="Teacher" style="width: 150px">
+                        <option disabled selected>Не вказано</option>
+                    </select>
+                }
+            </td>
+
+            <td id="@Model.WeekNum-@Model.DayNumber-@i-@(5)">
+                @try
+                {
+                    if (Model.DayLessons[i - 1].Classroom != null)
+                    {
+                        <select name="Classroom" style="width: 150px">
+                            <option disabled value="@Model.DayLessons[i - 1].ClassroomID" selected>@Model.DayLessons[i - 1].Classroom</option>
+                        </select>
+                    }
+                    else if (Model.DayLessons[i - 1].Classroom == null)
+                    {
+                        <select disabled name="Classroom" style="width: 150px">
+                            <option disabled selected>Не вказано</option>
+                        </select>
+                    }
+                }
+                catch (Exception)
+                {
+                    <select disabled name="Classroom" style="width: 150px">
+                        <option disabled selected>Не вказано</option>
+                    </select>
+                }
+            </td>
+
+        </tr>
+    }
+</table>

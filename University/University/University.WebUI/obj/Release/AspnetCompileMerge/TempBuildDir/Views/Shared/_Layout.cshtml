@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="~/Content/select2.css" rel="stylesheet" />
+        <link href="~/Content/styleTable.css" rel="stylesheet" />
+        <link href="~/Content/buttonToSchedule.css" rel="stylesheet" />
+        <script type="text/javascript" src="~/Scripts/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery.tmpl.js"></script>
+        <script type="text/javascript" src="~/Scripts/select2.js"></script>
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/select2")
+        <link href="/Content/ui.jqgrid.css" rel="stylesheet" />
+        <script type ="text/javascript" src="/Scripts/jquery.jqGrid.src.js"></script>
+        <script type="text/javascript" src="/Scripts/select2_locale_ua.js"></script>
+        <script type ="text/javascript" src="/Scripts/i18n/grid.locale-en.js"></script>
+</head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("Система керування розкладу КНУТД", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("Головна", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Інструкція", "About", "Home")</li>
+                            @if (Request.IsAuthenticated)
+                            {
+                                <li>@Html.ActionLink("Завантаження даних", "EditDataMenu", "EditData")</li>
+                            } 
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p style="text-align:center"> @DateTime.Now.Year - Designed by Igor Svitelskyi</p>    
+                </div>  
+            </div>
+        </footer>
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

@@ -1,0 +1,207 @@
+﻿@model List<University.WebUI.Models.DayModel>
+
+<script>
+    //$(document).ready(function () {
+    //    $("select").select2({ maximumSelectionSize: 1, placeholder: "Поле для пошуку..." })
+    //});
+</script>
+
+<h5>@Model.First().DayName</h5>
+<table id="mainTable" class="simple-little-table" cellspacing='0'>
+    <tr>
+        <th><font size="1"><span>№ пари</span></font></th>
+        <th><font size="1"><span>Предмет</span></font></th>
+        <th><font size="1"><span>Тип пари</span></font></th>
+        <th><font size="1"><span>Викладач</span></font></th>
+        <th><font size="1"><span>Аудиторія</span></font></th>
+        <th><font size="1"><span>Група</span></font></th>
+    </tr>
+    @for (int i = 1; i < 7; i++)
+    {
+        <tr>
+            <td>
+                @i
+            </td>
+            @if (Model.Where(j => j.DayLessons[i - 1].Teacher == null).Select(p => p.DayLessons[i - 1]).Count() != Model.Select(p => p.DayLessons[i - 1]).Count())
+            {
+                <td>
+                    @foreach (var item in Model)
+                    {
+                        try
+                        {
+                            if (item.DayLessons[i - 1].Subject != null)
+                            {
+                                <input type="text" style="width: 150px" value="@item.DayLessons[i - 1].Subject" readonly><br>
+                                @*<select style="width: 150px">
+                                        <option disabled selected>@Model.DayLessons[i - 1].Subject</option>
+                                    </select>*@
+                            }
+                            else if (item.DayLessons[i - 1].Subject == null)
+                            {
+                                @*<input type="text" style="width: 150px" readonly><br>*@
+                                @*<select style="width: 150px">
+                                        <option disabled selected>Виберіть предмет</option>
+                                    </select>*@
+                            }
+
+                        }
+                        catch (Exception)
+                        {
+
+                            @*<input type="text" style="width: 150px; opacity : 0"  readonly><br>*@
+                            @*<select style="width: 150px">
+                                    <option disabled selected>Виберіть предмет</option>
+                                </select>*@
+                        }
+
+                    }
+                </td>
+                <td>
+
+                    @foreach (var item in Model)
+                    {
+
+                        try
+                        {
+                            if (item.DayLessons[i - 1].LessonType != null)
+                            {
+                                <input type="text" style="width: 150px" value="@item.DayLessons[i - 1].LessonType" readonly><br>
+                                @*<select style="width: 150px">
+                                        <option disabled selected>@Model.DayLessons[i - 1].LessonType</option>
+                                    </select>*@
+                            }
+                            else if (item.DayLessons[i - 1].LessonType == null)
+                            {
+                                @*<input type="text" style="width: 150px" readonly><br>*@
+                                @*<select style="width: 150px">
+                                        <option disabled selected>Виберіть тип пари</option>
+                                    </select>*@
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            @*<input type="text" style="width: 150px" readonly><br>*@
+                            @*<select style="width: 150px">
+                                    <option disabled selected>Виберіть тип пари</option>
+                                </select>*@
+                        }
+
+
+
+                    }
+
+                </td>
+                <td>
+                    @foreach (var item in Model)
+                    {
+
+                        try
+                        {
+                            if (item.DayLessons[i - 1].Teacher != null)
+                            {
+                                <input type="text" style="width: 150px" value="@item.DayLessons[i - 1].Teacher" readonly><br>
+                                @*<select style="width: 150px">
+                                        <option disabled selected>@Model.DayLessons[i - 1].Teacher</option>
+                                    </select>*@
+                            }
+                            else if (item.DayLessons[i - 1].Teacher == null)
+                            {
+                                @*<input type="text" style="width: 150px" readonly><br>*@
+                                @*<select style="width: 150px">
+                                        <option disabled selected>Виберіть викладача</option>
+                                    </select>*@
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            @*<input type="text" style="width: 150px" readonly><br>*@
+                            @*<select style="width: 150px">
+                                    <option disabled selected>Виберіть викладача</option>
+                                </select>*@
+                        }
+
+                    }
+                </td>
+                <td>
+                    @foreach (var item in Model)
+                    {
+
+                        try
+                        {
+                            if (item.DayLessons[i - 1].Classroom != null)
+                            {
+                                <input type="text" style="width: 150px" value="@item.DayLessons[i - 1].Classroom" readonly><br>
+                                @*<select style="width: 150px">
+                                        <option disabled selected>@Model.DayLessons[i - 1].Classroom</option>
+                                    </select>*@
+                            }
+                            else if (item.DayLessons[i - 1].Classroom == null)
+                            {
+                                @*<input type="text" style="width: 150px" readonly><br>*@
+                                @*<select style="width: 150px">
+                                        <option disabled selected>Виберіть аудиторію</option>
+                                    </select>*@
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            @*<input type="text" style="width: 150px" readonly><br>*@
+                            @*<select style="width: 150px">
+                                    <option disabled selected>Виберіть аудиторію</option>
+                                </select>*@
+                        }
+                    }
+                </td>
+                  <td>
+                    @foreach (var item in Model)
+                    {
+
+                        try
+                        {
+                            if (item.DayLessons[i - 1].Group != null)
+                            {
+                                <input type="text" style="width: 150px" value="@item.DayLessons[i - 1].Group" readonly><br>
+                                @*<select style="width: 150px">
+                                        <option disabled selected>@Model.DayLessons[i - 1].Classroom</option>
+                                    </select>*@
+                            }
+                            else if (item.DayLessons[i - 1].Group == null)
+                            {
+                                @*<input type="text" style="width: 150px" readonly><br>*@
+                                @*<select style="width: 150px">
+                                        <option disabled selected>Виберіть аудиторію</option>
+                                    </select>*@
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            @*<input type="text" style="width: 150px" readonly><br>*@
+                            @*<select style="width: 150px">
+                                    <option disabled selected>Виберіть аудиторію</option>
+                                </select>*@
+                        }
+                    }
+                </td>
+            }
+            else
+            {
+                <td>
+                    <input type="text" style="width: 150px; opacity : 0" readonly><br>
+                </td>
+                <td>
+                    <input type="text" style="width: 150px; opacity : 0" readonly><br>
+                </td>
+                <td>
+                    <input type="text" style="width: 150px; opacity : 0" readonly><br>
+                </td>
+                <td>
+                    <input type="text" style="width: 150px; opacity : 0" readonly><br>
+                </td>
+                 <td>
+                    <input type="text" style="width: 150px; opacity : 0" readonly><br>
+                </td>
+            }
+        </tr>
+    }
+    
+</table>

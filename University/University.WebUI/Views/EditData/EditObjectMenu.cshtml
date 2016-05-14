@@ -1,0 +1,167 @@
+﻿@model University.WebUI.Models.ShortVersionsModels.ObjectEditModel
+
+
+
+<div id="indicator" style="display:none; text-align:center; opacity: 0">
+    <p style="font-style:oblique; text-align:center">Завантажується розклад. Зачекайте будь ласка...</p>
+    <img id="indicatorImg" src="@Url.Content("~/Content/loading.gif")" alt="loading..." />
+</div>
+
+<p id="ID" style="display:none;">@Model.ID</p>
+<p id="ChangeFaculty" style="display:none;">@Model.ChangeFaculty</p>
+<div id="All" style="text-align: left; opacity: 0">
+    @if (Model.IsDelete == false)
+    {
+        <h2>@Model.OperationName</h2>
+        <div id="resultMessage" style="height: auto; width: 35%; text-align: left; margin-left: 0px; opacity: 0;">
+            @if (Model.Message != null)
+            {
+
+                if (Model.Message != "Ви не внесли зміни!")
+                {
+                    <div class="success" style="height: auto; width: 50%; text-align: left; margin-left: 0px; margin-right: auto">@Model.Message</div>
+                }
+                else if (Model.Message == "Ви не внесли зміни!")
+                {
+                    <div class="warning" style="auto; width: 50%; text-align: left; margin-left: 0px; margin-right: auto">@Model.Message</div>
+                }
+            }
+        </div>
+        <div id="dialog"></div>
+        <form action="@Url.Action("SaveObject")" method="post">
+            <fieldset>
+                @if (Model.TypeObject == "faculty")
+                {
+                    <div>
+                        @Html.Label("Повна назва факультету: ")
+                        <div style="display:inline-block;" id="FacultyNameLabel">@Html.TextBoxFor(x => x.Name, new { style = "width: 500px;" }) <label style="color: red; opacity: 0; display: inline-block;">Значення назви факультету не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Скорочена назва факультету: ")
+                        <div style="display:inline-block;" id="FacultyShortNameLabel">@Html.TextBoxFor(x => x.ShortName) <label style="color: red; opacity: 0; display: inline-block;">Значення скороченої назви факультету не може бути пустим!</label></div>
+                    </div>
+                }
+                else if (Model.TypeObject == "cathedra")
+                {
+                    <div>
+                        @Html.Label("Повна назва кафедри: ")
+                        <div style="display:inline-block;" id="CathedraNameLabel">@Html.TextBoxFor(x => x.Name, new { style = "width: 500px;" }) <label style="color: red; opacity: 0; display: inline-block;">Значення назви кафедри не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Скорочена назва кафедри: ")
+                        <div style="display:inline-block;" id="CathedraShortNameLabel">@Html.TextBoxFor(x => x.ShortName) <label style="color: red; opacity: 0; display: inline-block;">Значення скороченої назви кафедри не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Факультет, якому підпорядковується кафедра: ")
+                        <label>@Html.DropDownListFor(x => x.FacultyID, Model.Faculties, new { style = "width: 500px;" })</label>
+                    </div>
+                }
+                else if (Model.TypeObject == "stream")
+                {
+                    <div>
+                        @Html.Label("Назва потоку: ")
+                        <div style="display:inline-block;" id="StreamNameLabel">@Html.TextBoxFor(x => x.Name) <label style="color: red; opacity: 0; display: inline-block;">Значення назви потоку не може бути пустим!</label></div>
+                    </div>
+                    <div id="studentCount">
+                        @Html.Label("Кількість студентів потоку: ")
+                        <div style="display:inline-block;" id="studentCountLabel">@Html.TextBoxFor(x => x.StudentsCount) <label style="color: red; opacity: 0; display: inline-block;">Значення кількості студентів не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        <label>Рік навчання:  @Html.DropDownListFor(x => x.YearOfStudy, Model.CoursesNumbers)</label>
+                    </div>
+                    <div>
+                        @Html.Label("Факультет, якому підпорядковується потік: ")
+                        <label>@Html.DropDownListFor(x => x.FacultyID, Model.Faculties, new { style = "width: 500px;" })</label>
+                    </div>
+                }
+                else if (Model.TypeObject == "group")
+                {
+                    <div>
+                        @Html.Label("Назва групи: ")
+                        <div style="display:inline-block;" id="GroupNameLabel">@Html.TextBoxFor(x => x.Name) <label style="color: red; opacity: 0; display: inline-block;">Значення назви групи не може бути пустим!</label></div>
+                    </div>
+                    <div id="studentCount">
+                        @Html.Label("Кількість студентів групи: ")
+                        <div style="display:inline-block;" id="studentCountLabel">@Html.TextBoxFor(x => x.StudentsCount) <label style="color: red; opacity: 0; display: inline-block;">Значення кількості студентів не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Потік, якому підпорядковується група: ")
+                        <label>@Html.DropDownListFor(x => x.StreamID, Model.Streams, new { style = "width: 250px;" })</label>
+                    </div>
+                    <div>
+                        @Html.Label("Факультет, якому підпорядковується група: ")
+                        <label id="facultyList">@Html.DropDownListFor(x => x.FacultyID, Model.Faculties, new { style = "width: 500px;" })</label>
+                    </div>
+                }
+                else if (Model.TypeObject == "teacher")
+                {
+                    <div>
+                        @Html.Label("ПІБ викладача: ")
+                        <div style="display:inline-block;" id="TeacherNameLabel">@Html.TextBoxFor(x => x.Name) <label style="color: red; opacity: 0; display: inline-block;">Поле ПІБ викладача не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Посада(наукове звання) викладача: ")
+                        <div style="display:inline-block;" id="TeacherPostLabel">@Html.TextBoxFor(x => x.TeacherPost) <label style="color: red; opacity: 0; display: inline-block;">Поле наукового звання викладача не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Кафедра, якій підпорядковується викладач: ")
+                        <div id="cathdraList">@Html.DropDownListFor(x => x.CathedraID, Model.Cathedras, new { style = "width: 500px;" }) <label id="changeMessage" style="color: red; opacity: 0; display: inline-block;">Зверніть увагу! Ви змінили факультет, тому список доступних кафедр для викладача змінився!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Факультет, якому підпорядковується викладач: ")
+                        <label id="facultyList">@Html.DropDownListFor(x => x.FacultyID, Model.Faculties, new { style = "width: 500px;" })</label>
+                    </div>
+                }
+                else if (Model.TypeObject == "classroom")
+                {
+                    <div>
+                        @Html.Label("Назва аудиторії: ")
+                        <div style="display:inline-block;" id="ClassroomNameLabel">@Html.TextBoxFor(x => x.Name) <label style="color: red; opacity: 0; display: inline-block;">Значення назви аудиторії не може бути пустим!</label></div>
+                    </div>
+                    <div id="studentCount">
+                        @Html.Label("Максимальна місткість студентів аудиторії: ")
+                        <div style="display:inline-block;" id="studentCountLabel">@Html.TextBoxFor(x => x.StudentsCount) <label style="color: red; opacity: 0; display: inline-block;">Значення місткості аудиторії не може бути пустим!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Тип аудиторії: ")
+                        <label id="ClassroomTypesList">@Html.DropDownListFor(x => x.ClassroomTypeID, Model.ClassroomTypes)</label>
+                    </div>
+                    <div>
+                        @Html.Label("Кафедра, якій підпорядковується аудиторія: ")
+                        <div id="cathdraList">@Html.DropDownListFor(x => x.CathedraID, Model.Cathedras, new { style = "width: 500px;" }) <label id="changeMessage" style="color: red; opacity: 0; display: inline-block;">Зверніть увагу! Ви змінили факультет, тому список доступних кафедр для аудиторії змінився!</label></div>
+                    </div>
+                    <div>
+                        @Html.Label("Факультет, якому підпорядковується аудиторія: ")
+                        <label id="facultyList">@Html.DropDownListFor(x => x.FacultyID, Model.Faculties, new { style = "width: 500px;" })</label>
+                    </div>
+                }
+                <div style="display:none">
+                    @Html.TextBoxFor(x => x.ID)
+                </div>
+                <div style="display:none">
+                    @Html.TextBoxFor(x => x.TypeObject)
+                </div>
+                <div id="SaveButtonDiv">
+                    <input id="SaveButton" name="save" type="submit" class="button button-green" style="width:150px" value="Зберегти" />
+                    @if (Model.IsCreate == false)
+                    {
+                        <input id="DeleteButton" type="submit" class="button button-red" style="width:150px" value="Видалити" />
+                    }
+                    @*@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                    {
+                    <input type="submit" class="button button-orange" style="width: 150px;" value="Вийти" />
+                    }*@
+                </div>
+            </fieldset>
+        </form>
+     
+    }
+    else
+    {
+        @*<div style="height: auto; width: 35%; text-align: center; margin-left: 30%;">*@
+        <div class="warning" style="width: 50%; text-align: center; margin: auto;">@Model.DeleteMessage</div>
+        <input id="validateDelete" type="submit" class="button button-red" style="width:100px" value="Видалити" />
+        <input id="backToEdit" type="submit" class="button button-green" style="width:100px" value="Назад" />
+        @*</div>*@
+    }
+</div>

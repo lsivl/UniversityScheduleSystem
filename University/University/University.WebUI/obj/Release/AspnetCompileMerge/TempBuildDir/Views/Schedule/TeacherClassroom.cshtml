@@ -1,0 +1,15 @@
+﻿@model University.WebUI.Models.ScheduleTeacherClassroomModel
+
+
+<div id="teacherClassroomInformation" style="text-align:center">
+    <h3 style="text-align:center">Кафедра: @Model.CathedraName</h3>
+    @if (@Model.TypeData == "teacher")
+    {
+        <h2 style="text-align:center">Викладач: @Model.TeacherName</h2>
+    }
+    else if (@Model.TypeData == "classroom")
+    {
+        <h2 style="text-align:center">Аудиторія: @Model.ClassroomName</h2>
+    }
+    
+</div>

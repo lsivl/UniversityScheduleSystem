@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University.WebUI", "University.WebUI\University.WebUI.csproj", "{990A9741-EB7B-4628-9615-47CD7C4E81DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University.Domain", "University.Domain\University.Domain.csproj", "{5948EAED-9080-4D0C-BC5D-4FCAA4258663}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{990A9741-EB7B-4628-9615-47CD7C4E81DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990A9741-EB7B-4628-9615-47CD7C4E81DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990A9741-EB7B-4628-9615-47CD7C4E81DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990A9741-EB7B-4628-9615-47CD7C4E81DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5948EAED-9080-4D0C-BC5D-4FCAA4258663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5948EAED-9080-4D0C-BC5D-4FCAA4258663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5948EAED-9080-4D0C-BC5D-4FCAA4258663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5948EAED-9080-4D0C-BC5D-4FCAA4258663}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

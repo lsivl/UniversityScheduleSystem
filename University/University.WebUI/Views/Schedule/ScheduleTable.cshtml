@@ -1,0 +1,423 @@
+﻿@model University.WebUI.Models.ScheduleTableModel
+
+<script>
+
+    function changeSHift(radioButton) {
+        var firstLesson = 1;
+        if (radioButton.name == "1shift") {
+            firstLesson = 1;
+        }
+        else if (radioButton.name == "2shift") {
+            firstLesson = 4;
+        }
+        $("#shellTable").fadeTo("slow", 0);
+        $("#indicator").show();
+        $("#indicator").fadeTo("fast", 1);
+        $("#indicator").css("text-align", "center");
+        url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+        var group = $("#groupId").text();
+        var dataType = $("#typeData").text();
+        $.post(url, { Id: group, typeData: dataType, numberFirstLesson: firstLesson }, function (result) {
+            $("#scheduleTable").replaceWith(result).queue(function () {
+                $("#indicator").fadeTo("fast", 0);
+                $("#shellTable").fadeTo("slow", 1);
+                $("#indicator").hide();
+            });
+        });
+    }
+
+    function deleteLesson(button) {
+        //$("#indicator").show();
+        //$("#indicator").fadeTo("fast", 1);
+        //$("#indicator").css("text-align", "center");
+        var tdNode = button.parentNode;
+        var trNode = tdNode.parentNode;
+        var trNode2 = trNode.parentNode;
+        var id = "#" + trNode2.id;
+        var group = $("#groupId").text();
+        var tdsId = new Array();
+        $(document).ready(function () {
+            var tds = $(id).children();
+            var selectors = $(id).find('select');
+            for (i = 0; i < tds.length; i++) {
+                tdsId[i] = tds[i].id;
+            }
+        });
+        var url = '@Url.Content("~/")' + "Schedule/DeleteLesson";
+        $.post(url, { ParentNode: trNode.id, CurrentGroupId: group, TdElementsID: tdsId.toString() }, function (result) {
+            $(id).replaceWith(result);
+            $(document).ready(function () {
+                $("#shellTable").fadeTo("slow", 0);
+                $("#indicator").show();
+                $("#indicator").fadeTo("fast", 1);
+                $("#indicator").css("text-align", "center");
+                url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+                //    var groupId = this.id;
+                var dataType = $("#typeData").text();
+                $.post(url, { Id: group, typeData: dataType }, function (result) {
+                    $("#scheduleTable").replaceWith(result).queue(function () {
+                        $("#indicator").fadeTo("fast", 0);
+                        $("#shellTable").fadeTo("slow", 1);
+                        $("#indicator").hide();
+                    });
+                });
+            })
+        });
+    };
+
+    $(document).ready(function () {
+        $("#relay input").change(function (e) {
+            e.preventDefault();
+            $("#shellTable").fadeTo("slow", 0);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+            var groupId = this.id;
+            var firstLesson = $(e.target).val();
+            $.post(url, { groupId: groupId, numberFirstLesson: firstLesson }, function (result) {
+                $("#scheduleTable").replaceWith(result).queue(function () {
+                    $("#indicator").fadeTo("fast", 0);
+                    $("#shellTable").fadeTo("slow", 1);
+                    $("#indicator").hide();
+                });
+            });
+        })
+        EventUpdate();
+
+
+        $("#SaveToDb").click(function (e) {
+
+            Save();
+        });
+
+
+
+        function EventUpdate() {
+            $("select").change(function (e) {
+                e.preventDefault();
+                var tdNode = this.parentNode;
+                var selectValue = $(e.target).val();
+                var trNode = tdNode.parentNode;
+                var tdsId = new Array();
+                var tdsVal = new Array();
+                var id = "#" + trNode.id;
+                var numberLesson = $(id).find('p');
+                $(document).ready(function () {
+                    var tds = $(id).children();
+                    var selectors = $(id).find('select');
+                    for (i = 0; i < tds.length; i++) {
+                        tdsId[i] = tds[i].id;
+                        // alert(tdsId[i]);
+                    }
+                    for (i = 0; i < selectors.length; i++) {
+                        tdsVal[i] = selectors[i].value;
+                    }
+                })
+                var group = $("#groupId").text();
+                //var trNode = tdNode.parentNode;
+                //var id = "#" + trNode.id;;
+                //var td1 = $(id).find('*').attr("id");
+
+
+
+
+                // var parentElement = this.parentNode;
+
+                //$("#" + selectId).parent('div').each(function (index, elem) {
+                //    parentElement = elem.id;
+                ////});
+                //var td1 = $("#" + parentElement.id).find('*').get(1);
+                //var currentTypeLesson = td1.id;
+                //var currentSubject = $("#" + parentElement.id).find('select[name*=Subject]');//=("#"+parentElementId).find('select[name*=Subject]').val();
+                //var currentTeacher = $("#" + parentElement.id).find('select[name*=Teacher]');// = ("#" + parentElementId).find('select[name*=Teacher]').val();
+                //var currentClassroom = $("#" + parentElement.id).find('select[name*=Classroom]');// = ("#" + parentElementId).find('select[name*=Classroom]').val();
+
+                //$("#"+parentElement).children('select').each(function (index, elem) {
+                //    if (elem.name == "TypeLesson") { currentTypeLesson = elem.val(); }
+                //    else if (elem.name == "Subject") { currentSubject = elem.val(); }
+                //    else if (elem.name == "Teacher") { currentTeacher = elem.val(); }
+                //    else if (elem.name == "Classroom") { currentClassroom = elem.val(); }
+                //});
+                var url = '@Url.Content("~/")' + "Schedule/ChangeData";
+                $.post(url, { ParentNode: trNode.id, ElementId: tdNode.id, ElementValue: selectValue, TdElementsID: tdsId.toString(), TdElementsValues: tdsVal.toString(), CurrentGroupId: group, NumberLesson: numberLesson.text() }, function (result) {
+                    $(id).replaceWith(result);
+                    var textError = $("#textError").text();
+                    if (textError != "") {
+                        alert(textError);
+                    }
+                    $("#textError").remove();
+                    $(document).ready(function () {
+                        EventUpdate();
+                    })
+                    var isready = $("#ChangeReady").text();
+                    if (isready != "") {
+                        //  Save();
+                        $("#shellTable").fadeTo("slow", 0);
+                        $("#indicator").show();
+                        $("#indicator").fadeTo("fast", 1);
+                        $("#indicator").css("text-align", "center");
+                        url = '@Url.Content("~/")' + "Schedule/ScheduleTable";
+                        var groupId = $("#groupId").text();
+                        var dataType = $("#typeData").text();
+                        $.post(url, { Id: groupId, typeData: dataType }, function (result) {
+                            $("#scheduleTable").replaceWith(result).queue(function () {
+                                $("#indicator").fadeTo("fast", 0);
+                                $("#shellTable").fadeTo("slow", 1);
+                                $("#indicator").hide();
+                            });
+                        });
+                    }
+                });
+            });
+
+
+            //$("#deleteButton").click(function (e) {
+            //    e.preventDefault();
+
+
+        }
+        //$("select").select2({ maximumSelectionSize: 1, placeholder: "Поле для пошуку..." })
+
+        function Save() {
+            $("#shellTable").fadeTo("slow", 0);
+            $("#indicator").show();
+            $("#indicator").fadeTo("fast", 1);
+            $("#indicator").css("text-align", "center");
+            var Ids = new Array();
+            var Values = new Array();
+            var groupid = $("#groupId").text();
+            var selectors = $("select");
+            for (var i = 0; i < selectors.length; i++) {
+                Ids[i] = selectors[i].parentNode.id;
+                Values[i] = selectors[i].value;
+            }
+            url = '@Url.Content("~/")' + "Schedule/SaveToDb";
+            $.post(url, { Ids: Ids.toString(), Values: Values.toString(), GroupID: groupid }, function (result) {
+                $("#saveResult").replaceWith(result).queue(function () {
+                    $("#indicator").fadeTo("fast", 0);
+                    $("#shellTable").fadeTo("slow", 1);
+                    $("#indicator").hide();
+                    var uncorrectCells = $("#UncorrectCells").children();
+                    for (var i = 0; i < uncorrectCells.length; i++) {
+                        var cell = uncorrectCells[i];//.text();
+                        var id = cell.id;
+                        var value = $("#" + id).text();
+                        //alert(value);
+                        $(value).children().css("background-color", "#FFB4B4");
+                    }
+                });
+                alert($("#saveResultText").text());
+            });
+
+        }
+    })
+
+    function GenerateTable() {
+    }
+
+</script>
+
+<link href="~/Content/Input.css" rel="stylesheet" />
+<p id="firstLesson" style="display:none">@Model.GroupId</p>
+<div id="scheduleTable" style="text-align:center;">
+    @if (@Model.GroupName != "")
+    {
+        <h3>Вибрана група: @Model.GroupName</h3>
+    }
+
+
+    <p title="number" id="groupId" style="display:none">@Model.GroupId</p>
+    @if (Request.IsAuthenticated)
+    {
+        if (Model.ListScheduleTableModel == null)
+        {
+            <div id="relay" style="font: 18px bold; color: #444; cursor: pointer; ">
+                <br>
+                @if (Model.FirstWeek.Monday.FirstLesson == 1)
+                {
+                    <label><input id="@Model.GroupId" value="1" onclick="changeSHift(this);" type="radio" name="1shift" checked />Перша зміна  </label>
+                    <label><input id="@Model.GroupId" value="4" onclick="changeSHift(this);" type="radio" name="2shift" />Друга зміна</label>
+                }
+                else if (Model.FirstWeek.Monday.FirstLesson == 4)
+                {
+                    <label><input id="@Model.GroupId" value="1" onclick="changeSHift(this);" type="radio" name="1shift" />Перша зміна  </label>
+                    <label><input id="@Model.GroupId" value="4" onclick="changeSHift(this);" type="radio" name="2shift" checked />Друга зміна</label>
+                }
+                <br><br><br>
+            </div>
+        }
+    }
+    <table class="simple-little-table" cellspacing='0'>
+        <tr>
+            <th style="text-align:center"><font size="3"><span>Перший(непарний) тиждень</span></font></th>
+            <th style="text-align:center"><font size="3"><span>Другий(парний) тиждень</span></font></th>
+        </tr>
+        <tr>
+            @if (Model.ListScheduleTableModel == null)
+            {
+                if (Request.IsAuthenticated)
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.FirstWeek.Monday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.SecondWeek.Monday)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.FirstWeek.Monday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.SecondWeek.Monday)
+                    </td>
+                }
+            }
+            else
+            {
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Monday).ToList())
+                </td>
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Monday).ToList())
+                </td>
+            }
+        </tr>
+        <tr class='even'>
+            @if (Model.ListScheduleTableModel == null)
+            {
+                if (Request.IsAuthenticated)
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.FirstWeek.Thursday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.SecondWeek.Thursday)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.FirstWeek.Thursday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.SecondWeek.Thursday)
+                    </td>
+                }
+            }
+
+            else
+            {
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Thursday).ToList())
+                </td>
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Thursday).ToList())
+                </td>
+            }
+        </tr>
+        <tr>
+            @if (Model.ListScheduleTableModel == null)
+            {
+
+                if (Request.IsAuthenticated)
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.FirstWeek.Wednesday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.SecondWeek.Wednesday)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.FirstWeek.Wednesday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.SecondWeek.Wednesday)
+                    </td>
+                }
+            }
+            else
+            {
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Wednesday).ToList())
+                </td>
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Wednesday).ToList())
+                </td>
+            }
+        </tr>
+        <tr class='even'>
+            @if (Model.ListScheduleTableModel == null)
+            {
+                if (Request.IsAuthenticated)
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.FirstWeek.Tuesday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.SecondWeek.Tuesday)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.FirstWeek.Tuesday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.SecondWeek.Tuesday)
+                    </td>
+                }
+            }
+            else
+            {
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Tuesday).ToList())
+                </td>
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Tuesday).ToList())
+                </td>
+            }
+        </tr>
+        <tr>
+            @if (Model.ListScheduleTableModel == null)
+            {
+                if (Request.IsAuthenticated)
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.FirstWeek.Friday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(AdminVersion)", @Model.SecondWeek.Friday)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.FirstWeek.Friday)
+                    </td>
+                    <td>
+                        @Html.Partial("DayOfWeek(GuestVersion)", @Model.SecondWeek.Friday)
+                    </td>
+                }
+            }
+            else
+            {
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.FirstWeek.Friday).ToList())
+                </td>
+                <td>
+                    @Html.Partial("DayOfWeek(CathedraVersion)", @Model.ListScheduleTableModel.Select(p => p.SecondWeek.Friday).ToList()))
+                </td>
+            }
+        </tr>
+    </table>
+    @*<input id="SaveToDb" type="submit" class="button button-green" value="Зберегти зміни" />*@
+
+
+    <div id="saveResult" style="display:none"></div>
+</div>

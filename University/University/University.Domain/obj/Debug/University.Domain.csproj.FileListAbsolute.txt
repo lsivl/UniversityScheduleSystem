@@ -1,0 +1,40 @@
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\bin\Debug\University.Domain.dll.config
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\bin\Debug\University.Domain.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\bin\Debug\University.Domain.pdb
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\obj\Debug\University.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\obj\Debug\University.Domain.dll
+C:\Users\Igor\documents\visual studio 2013\Projects\University\University.Domain\obj\Debug\University.Domain.pdb
+G:\University\University.Domain\bin\Debug\University.Domain.dll.config
+G:\University\University.Domain\bin\Debug\University.Domain.dll
+G:\University\University.Domain\bin\Debug\University.Domain.pdb
+G:\University\University.Domain\bin\Debug\EntityFramework.dll
+G:\University\University.Domain\bin\Debug\EntityFramework.SqlServer.dll
+G:\University\University.Domain\bin\Debug\EntityFramework.xml
+G:\University\University.Domain\bin\Debug\EntityFramework.SqlServer.xml
+G:\University\University.Domain\obj\Debug\University.Domain.csprojResolveAssemblyReference.cache
+G:\University\University.Domain\obj\Debug\University.Domain.dll
+G:\University\University.Domain\obj\Debug\University.Domain.pdb
+D:\Other\Other\University\University.Domain\bin\Debug\University.Domain.dll.config
+D:\Other\Other\University\University.Domain\bin\Debug\University.Domain.dll
+D:\Other\Other\University\University.Domain\bin\Debug\University.Domain.pdb
+D:\Other\Other\University\University.Domain\bin\Debug\EntityFramework.dll
+D:\Other\Other\University\University.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\Other\Other\University\University.Domain\bin\Debug\EntityFramework.xml
+D:\Other\Other\University\University.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\Other\Other\University\University.Domain\obj\Debug\University.Domain.dll
+D:\Other\Other\University\University.Domain\obj\Debug\University.Domain.pdb
+D:\Other\Other\University\University.Domain\obj\Debug\University.Domain.csprojResolveAssemblyReference.cache
+D:\Other\Projects\University\University.Domain\bin\Debug\University.Domain.dll.config
+D:\Other\Projects\University\University.Domain\bin\Debug\University.Domain.dll
+D:\Other\Projects\University\University.Domain\bin\Debug\University.Domain.pdb
+D:\Other\Projects\University\University.Domain\bin\Debug\EntityFramework.dll
+D:\Other\Projects\University\University.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\Other\Projects\University\University.Domain\bin\Debug\EntityFramework.xml
+D:\Other\Projects\University\University.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\Other\Projects\University\University.Domain\obj\Debug\University.Domain.csprojResolveAssemblyReference.cache
+D:\Other\Projects\University\University.Domain\obj\Debug\University.Domain.dll
+D:\Other\Projects\University\University.Domain\obj\Debug\University.Domain.pdb
